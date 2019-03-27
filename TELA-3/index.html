@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Modal</title>
 
 </head>
@@ -19,7 +19,8 @@
         Click Me
     </button>
     <!--Modal-->
-    <div class="modal fade" id="largeShoes" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
+    <div class="modal fade" id="largeShoes" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
+        aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -30,60 +31,73 @@
                 </div>
 
                 <div class="modal-body">
-                        <h4>Cadastro de Funcionários:</h4>
+                    <h4>Cadastro de Funcionários:</h4>
                     <br>
                     <form>
                         <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="inputtext4">Nome Completo</label>
-                                <input type="text" class="form-control" id="inputEmail4" placeholder="Nome Completo">
+                            <div class="form-group col-md-3">
+                                <label for="inputtext4">Nome</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputtext4">Sobrenome</label>
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Sobrenome">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Email</label>
                                 <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                             </div>
-                            <div class="form-group col-md-5">
-                                <label for="inputPassword4">Senha</label>
-                                <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                            <div class="form-group col-md-3">
+                                <label for="inputName">Canal de Seleção</label>
+                                <select id="input" class="form-control">
+                                    <option selected>Selecione...</option>
+                                    <option>Indeed.com</option>
+                                    <option>Vagas.com</option>
+                                    <option>Info Jobs</option>
+                                    <option>Rio Vagas</option>
+                                    <option>Facebook</option>
+                                </select>
                             </div>
-                            <div class="form-group col-md-4">
+                            <div class="form-group col-md-3">
                                 <label for="inputNumero">Telefone</label>
                                 <input type="text" class="form-control" id="inputNumero" placeholder="(DDD) + Número">
                             </div>
                             <div class="form-group col-md-3">
-                                    <label for="inputCEP">CEP</label>
-                                    <input type="text" class="form-control" id="inputCEP" placeholder="Ex: 00000-000">
-                                </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress">Endereço</label>
-                            <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
-                        </div>
-                        <div class="form-group">
-                            <label for="inputAddress2">Endereço</label>
-                            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group col-md-4">
-                                <label for="inputCity">Cidade</label>
-                                <input type="text" class="form-control" id="inputCity" placeholder="Ex: Duque de Caxias">
+                                <label for="inputName">Status do candidato</label>
+                                <select id="input" class="form-control">
+                                    <option selected>Selecione...</option>
+                                    <option>Aprovado</option>
+                                    <option>Reprovado</option>
+                                    <option>BlackList</option>
+                                </select>
                             </div>
-                            <div class="form-group col-md-4">
-                                <label for="inputEstado">Estado</label>
-                                <select id="inputEstado" class="form-control">
-                                    <option selected>Escolher...</option>
-                                    <option>Rio de Janeiro</option>
+                            <div class="form-group col-md-3">
+                                <label for="inputName">Avaliações Realizadas</label>
+                                <select id="input" class="form-control">
+                                    <option selected>Selecione...</option>
+                                    <option>Dinâmica em grupo</option>
+                                    <option>Aplicação de prova</option>
+                                    <option>Entrevista indivucual</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Clique em mim
-                                </label>
+
+                        <div class="form-group row">
+                            <label for="example-datetime-local-input" class="col-2 col-form-label">Data e Hora</label>
+                            <div class="col-10">
+                                <input class="form-control" type="datetime-local" value="2019-03-27T13:45:00"
+                                    id="example-datetime-local-input">
                             </div>
                         </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputFile">Adicionar currículo</label>
+                            <input type="file" class="form-control-file" id="exampleInputFile"
+                                aria-describedby="fileHelp">
+                            <small id="fileHelp" class="form-text text-muted">Selecione o Currículo do
+                                candidato.</small>
+                        </div>
+
                         <button type="submit" class="btn btn-primary">Salvar</button>
                     </form>
 
@@ -93,12 +107,15 @@
     </div>
 
     <!--JavaScript (Opcional)-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
