@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Cadastro de Funcionários</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <a href="https://icons8.com/icon/3095/hamburger-menu"></a>
+  <!-- Custom styles for this template -->
+  <link href="css/estilo1.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading"><img src="img/rs.png" style="width: 12rem" class="rounded" alt="imagem-responsiva">
+      </div>
+      <div class="list-group list-group-flush">
+        <a href="" class="list-group-item list-group-item-action bg-light">Tabela</a>
+        <a href="#" data-toggle="modal" data-target="#largeShoes1"
+          class="list-group-item list-group-item-action bg-light">Adicionar</a>
+        <a href="index4.html" data-toggle="modal" data-target="#largeShoes2"
+          class="list-group-item list-group-item-action bg-light">Visualizar</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-light" id="menu-toggle"><img src="https://img.icons8.com/metro/26/000000/menu.png"></button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Opções
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="index2.html">Sair</a>
+                <div class="dropdown-divider"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <h1 class="mt-4">Gestão Funcionário:</h1>
+
+        <body>
+          <!--Modal-->
+          <div class="modal fade" id="largeShoes1" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <h4>Cadastro de Funcionários:</h4>
+                  <br>
+                  <form>
+                    <div class="form-row">
+                      <div class="form-group col-md-3">
+                        <label for="inputtext4">Nome</label>
+                        <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="inputtext4">Sobrenome</label>
+                        <input type="text" class="form-control" id="inputEmail4" placeholder="Sobrenome">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputEmail4">Email</label>
+                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="inputName">Canal de Seleção</label>
+                        <select id="input" class="form-control">
+                          <option selected>Selecione...</option>
+                          <option>Indeed.com</option>
+                          <option>Vagas.com</option>
+                          <option>Info Jobs</option>
+                          <option>Rio Vagas</option>
+                          <option>Facebook</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="inputNumero">Telefone</label>
+                        <input type="text" class="form-control" id="inputNumero" placeholder="(DDD) + Número">
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="inputName">Status do candidato</label>
+                        <select id="input" class="form-control">
+                          <option selected>Selecione...</option>
+                          <option>Aprovado</option>
+                          <option>Reprovado</option>
+                          <option>BlackList</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-md-3">
+                        <label for="inputName">Avaliações Realizadas</label>
+                        <select id="input" class="form-control">
+                          <option selected>Selecione...</option>
+                          <option>Dinâmica em grupo</option>
+                          <option>Aplicação de prova</option>
+                          <option>Entrevista indivucual</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <label for="example-datetime-local-input" class="col-2 col-form-label">Data e Hora</label>
+                      <div class="col-10">
+                        <input class="form-control" type="datetime-local" value="2019-03-27T13:45:00"
+                          id="example-datetime-local-input">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="exampleInputFile">Adicionar currículo</label>
+                      <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                      <small id="fileHelp" class="form-text text-muted">Selecione o Currículo do
+                        candidato.</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Numeração:</th>
+            <th scope="col">Nome:</th>
+            <th scope="col">Telefone:</th>
+            <th scope="col">Endereço:</th>
+            <th scope="col">Email:</th>
+            <th scope="col">Funções:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Gabriel Baltar Pereira</td>
+            <td>(21) 98657-9088</td>
+            <td>Rua São João</td>
+            <td>gabriel.baltar21@hotmail.com</td>
+            <td>
+              <button type="button" class="btn btn-dark btn-sm data-toggle=" modal" data-target="#largeShoes1"">Editar</button>
+                <button type=" button" class="btn btn-dark btn-sm">Visualizar</button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Ana Maria</td>
+            <td>(21) 90876-4587</td>
+            <td>Rua 10</td>
+            <td>@anamaria18@gmail.com</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Lucas</td>
+            <td>(21) 98765-2354</td>
+            <td>Rua Mercúrio</td>
+            <td>@lucas.outlook.com</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <!--SEGUNDO MODAL-->
+      <div class="modal fade" id="largeShoes2" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="img/rs.png" style="width: 15rem" class="rounded" alt="imagem-responsiva">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <fieldset disabled>
+                  <div class="form-row">
+                    <div class="form-group col-md-3">
+                      <label for="inputtext4">Nome</label>
+                      <input type="text" class="form-control" id="inputnamel4" placeholder="Nome">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label for="inputtext4">Sobrenome</label>
+                      <input type="text" class="form-control" id="inputnamel4" placeholder="Sobrenome">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="inputemail4">Email</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label for="inputname4">Canal de Seleção</label>
+                      <select id="input" class="form-control">
+                        <option selected>Selecione...</option>
+                        <option>Indeed.com</option>
+                        <option>Vagas.com</option>
+                        <option>Info Jobs</option>
+                        <option>Rio Vagas</option>
+                        <option>Facebook</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label for="inputNumero4">Telefone</label>
+                      <input type="text" class="form-control" id="inputNumero" placeholder="(DDD) + Número)">
+                    </div>
+                    <div class=" form-group col-md-3">
+                      <label for="inputName">Status do Canditato</label>
+                      <select id="input" class="form-control">
+                        <option selected>Selecione...</option>
+                        <option>Aprovado</option>
+                        <option>Reprovado</option>
+                        <option>Blacklist</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                      <label for="inputName">Avaliações Realizadas</label>
+                      <select id="input" class="form-control">
+                        <option selected>Selecione...</option>
+                        <option>Dinâmica em grupo</option>
+                        <option>Aplicação de prova</option>
+                        <option>Entrevista individual</option>
+                      </select>
+                    </div>
+                    <div class="form-group row">
+                      <label for="example-datetime-local-input" class="col-4 col-form-label">Data e
+                        Hora</label>
+                      <div class="col-12">
+                        <input class="form-control" type="datetime-local" value="2019-03-27T13:45:00"
+                          id="example-datetime-local-input">
+                      </div>
+                    </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+    </div>
+
+
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+      $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+
+</body>
+
+</html>
