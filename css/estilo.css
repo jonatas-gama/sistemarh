@@ -1,0 +1,26 @@
+.bg {
+    font-family: sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: #eceff1;
+    background-size: 100%;
+}
+
+.img-fluid {
+    background: #fff;
+    display: flex;
+}
+
+.form-cantainer {
+    position: absolute;
+    top: 15vh;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0pc #000;
+}
+
+@media only screen and (max-width: 678px) {
+    .bg {
+        background-size: 300%;
+    }
