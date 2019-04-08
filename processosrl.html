@@ -28,6 +28,7 @@
       </div>
       <div class="list-group list-group-flush">
         <a href="#" class="list-group-item list-group-item-action bg-light">Relatórios</a>
+
         <a href="processosag.html" class="list-group-item list-group-item-action bg-light">Processos Agendados</a>
         <a href="processosrl.html" class="list-group-item list-group-item-action bg-light">Processos Realizados</a>
         <a href="index.html" class="list-group-item list-group-item-action bg-light">Gestão Candidato</a>
@@ -42,6 +43,7 @@
 
     <!-- Menu Horizontal-->
     <div id="page-content-wrapper">
+
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <button class="btn btn-light" id="menu-toggle"><img
             src="https://img.icons8.com/metro/26/000000/menu.png"></button>
@@ -64,10 +66,29 @@
           </ul>
         </div>
       </nav>
-
+      <!--Modal de observações-->
+      <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <fieldset disabled>
+              <div class="modal-header">
+                <h5 class="modal-title" id="TituloModalCentralizado">Observações</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
       <!--Modal de Cadatro de Candidatos-->
       <div class="container-fluid">
-        <h1 class="my-2">Gestão Candidatos:</h1>
+        <h1 class="my-2">Processos Realizados:</h1>
         <div class="modal fade" id="largeShoes1" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
           aria-hidden="true">
           <div class="modal-dialog modal-lg">
@@ -128,10 +149,6 @@
                     </div>
                   </div>
                   <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Observações:</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                  <div class="form-group">
                     <label for="exampleInputFile">Adicionar currículo</label>
                     <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
                     <small id="fileHelp" class="form-text text-muted">Selecione o Currículo do
@@ -147,96 +164,107 @@
       <table class="table table-bordered table-hover">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">Numeração:</th>
             <th scope="col">Nome:</th>
             <th scope="col">Telefone:</th>
-            <th scope="col">Endereço:</th>
-            <th scope="col">Email:</th>
-            <th scope="col">Funções:</th>
+            <th scope="col">Cargo:</th>
+            <th scope="col">Observações:</th>
+            <th scope="col">Data:</th>
+            <th scope="col">Status:</th>
+            <th scope="col">Finalizar</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Gabriel Baltar Pereira</td>
-            <td>(21) 98657-9088</td>
-            <td>Rua São João</td>
-            <td>gabriel.baltar21@hotmail.com</td>
+            <th scope="row">Gabriel Baltar Pereira</th>
+            <td>(21) 98754-8081</td>
+            <td>Consultor de vendas</td>
             <td align="center">
-              <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes2">Visualizar</button>
-              <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes1">Editar</button>
+                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
             </td>
-          </tr>
-          <tr>
-            <th scope=" row">2</th>
-            <td>Ana Maria</td>
-            <td>(21) 90876-4587</td>
-            <td>Rua 10</td>
-            <td>@anamaria18@gmail.com</td>
-            <td align="center">
-              <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes2">Visualizar</button>
-              <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes1">Editar</button>
-            </td>
-          </tr>
-          <tr>
-            <th scope=" row">3</th>
-            <td>Lucas</td>
-            <td>(21) 98765-2354</td>
-            <td>Rua Mercúrio</td>
-            <td>@lucas.outlook.com</td>
-            <td align="center">
-              <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes2">Visualizar</button>
-              <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes1">Editar</button>
-            </td>
+            <td>12/04/2019</td>
+            <td class="text-success">Aprovado</td>
+            <td></td>
           </tr>
         </tbody>
-        <tr>
-          <th scope=" row">1</th>
-          <td>Gabriel Baltar Pereira</td>
-          <td>(21) 98657-9088</td>
-          <td>Rua São João</td>
-          <td>gabriel.baltar21@hotmail.com</td>
-          <td align="center">
-            <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
-              data-target="#largeShoes2">Visualizar</button>
-            <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
-              data-target="#largeShoes1">Editar</button>
-          </td>
-        </tr>
         <tbody>
           <tr>
-            <th scope="row">1</th>
-            <td>Gabriel Baltar Pereira</td>
-            <td>(21) 98657-9088</td>
-            <td>Rua São João</td>
-            <td>gabriel.baltar21@hotmail.com</td>
+            <th scope="row">Gabriel Baltar Pereira</th>
+            <td>(21) 98754-8081</td>
+            <td>Consultor de vendas</td>
+             <td align="center">
+                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
+            </td>
+            <td>12/04/2019</td>
+            <td class="text-danger">Reprovado</td>
+            <td></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row">Gabriel Baltar Pereira</th>
+            <td>(21) 98754-8081</td>
+            <td>Consultor de vendas</td>
+             <td align="center">
+                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
+            </td>
+            <td>12/04/2019</td>
+            <td class="text-light bg-dark">Black List</td>
             <td align="center">
-              <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes2">Visualizar</button>
               <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes1">Editar</button>
+                data-target="#largeShoes1">Visualizar</button>
             </td>
           </tr>
         </tbody>
         <tbody>
           <tr>
-            <th scope=" row">1</th>
-            <td>Gabriel Baltar Pereira</td>
-            <td>(21) 98657-9088</td>
-            <td>Rua São João</td>
-            <td>gabriel.baltar21@hotmail.com</td>
-            <td align="center">
-              <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes2">Visualizar</button>
-              <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes1">Editar</button>
+            <th scope="row">Gabriel Baltar Pereira</th>
+            <td>(21) 98754-8081</td>
+            <td>Consultor de vendas</td>
+             <td align="center">
+                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
             </td>
+            <td>12/04/2019</td>
+            <td class="text-success">Aprovado</td>
+            <td></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row">Gabriel Baltar Pereira</th>
+            <td>(21) 98754-8081</td>
+            <td>Consultor de vendas</td>
+             <td align="center">
+                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
+            </td>
+            <td>12/04/2019</td>
+            <td class="text-danger">Reprovado</td>
+            <td></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row">Gabriel Baltar Pereira</th>
+            <td>(21) 98754-8081</td>
+            <td>Consultor de vendas</td>
+             <td align="center">
+                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
+            </td>
+            <td>12/04/2019</td>
+            <td class="text-success">Aprovado</td>
+            <td></td>
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <th scope="row">Gabriel Baltar Pereira</th>
+            <td>(21) 98754-8081</td>
+            <td>Consultor de vendas</td>
+             <td align="center">
+                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
+            </td>
+            <td>12/04/2019</td>
+            <td class="text-primary">Stand-By</td>
+            <td></td>
           </tr>
         </tbody>
       </table>
@@ -316,7 +344,7 @@
         </div>
       </div>
     </div>
-    
+
     <!--Modal de Cadastro de funcionários-->
     <div class="modal fade" id="largeShoes3" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
       aria-hidden="true">
