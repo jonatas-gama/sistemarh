@@ -11,10 +11,11 @@
   <title>Cadastro de Funcionários</title>
 
   <!-- Bootstrap com CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://10.10.1.56/sistema/vendor/dist/css/bootstrap.min.css" rel="stylesheet">
   <a href="https://icons8.com/icon/3095/hamburger-menu"></a>
   <!-- CSS-->
-  <link href="css/estilo1.css" rel="stylesheet">
+  <link href="http://10.10.1.56/sistema/vendor/dist/css/estilo1.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
 
@@ -24,382 +25,110 @@
 
     <!-- Menu Lateral -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading"><img src="img/rs.png" style="width: 12rem" class="rounded" alt="imagem-responsiva">
+      <div style="width: 200px; height:70px;" class="sidebar-heading"><img src="http://10.10.1.56/sistema/vendor/dist/img/rs.png" class="rounded" style="width: 10rem;" alt="imagem-responsiva">
       </div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Relatórios</a>
-
-        <a href="processosag.html" class="list-group-item list-group-item-action bg-light">Processos Agendados</a>
-        <a href="processosrl.html" class="list-group-item list-group-item-action bg-light">Processos Realizados</a>
-        <a href="index.html" class="list-group-item list-group-item-action bg-light">Gestão Candidato</a>
+        <a href="http://10.10.1.56/sistema/auxiliar" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line fa-lg"></i> Relatórios</a>
+        <a href="http://10.10.1.56/sistema/auxiliar/processosagendados" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt fa-lg"></i> Processos Agendados</a>
+        <a href="http://10.10.1.56/sistema/auxiliar/processosrealizados" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check fa-lg"></i> Processos Realizados</a>
+        <a href="http://10.10.1.56/sistema/auxiliar/visualizafuncionarios" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users fa-lg"></i> Funcionários</a>
         <a href="#" data-toggle="modal" data-target="#largeShoes1"
-          class="list-group-item list-group-item-action bg-light">Cadastrar Candidato</a>
-        <a href="#" data-toggle="modal" data-target="#largeShoes7"
-          class="list-group-item list-group-item-action bg-light">Visualizar</a>
-        <a href="#" data-toggle="modal" data-target="#largeShoes3"
-          class="list-group-item list-group-item-action bg-light">Adicionar Usuário</a>
+          class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus fa-lg"></i> Cadastrar Candidato</a>
+        <!--<a href="#" data-toggle="modal" data-target="#largeShoes3"
+          class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>-->
       </div>
     </div>
 
     <!-- Menu Horizontal-->
     <div id="page-content-wrapper">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom col-12">
         <button class="btn btn-light" id="menu-toggle"><img
             src="https://img.icons8.com/metro/26/000000/menu.png"></button>
-        <nav class="navbar navbar-light bg-light">
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <nav class="navbar navbar-light bg-light col-9">
+          <form class="form-inline col-12">
+            <input class="form-control col-10 mr-sm-2 border-top-0 border-right-0 border-left-0" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
           </form>
         </nav>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="col-2 collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">Opções</a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="index2.html">Trocar Usuário</a>
-                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="index2.html">Logout</a>
               </div>
             </li>
           </ul>
         </div>
-      </nav>
-      <!--Modal de observações-->
-      <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <fieldset disabled>
-              <div class="modal-header">
-                <h5 class="modal-title" id="TituloModalCentralizado">Observações:</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="form-group">
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <!--Modal de Cadatro de Candidatos-->
-      <div class="container-fluid">
-        <h1 class="my-2">Processos Realizados:</h1>
-        <div class="modal fade" id="largeShoes1" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
-          aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <img src="img/rs.png" style="width: 15rem" class="rounded" alt="imagem-responsiva">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <h4>Cadastrar Candidatos:</h4>
-                <br>
-                <form>
-                  <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="inputtext4">Nome</label>
-                      <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputtext4">Sobrenome</label>
-                      <input type="text" class="form-control" id="inputEmail4" placeholder="Sobrenome">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputName">Canal de Seleção</label>
-                      <select id="input" class="form-control">
-                        <option selected>Selecione...</option>
-                        <option>Indeed.com</option>
-                        <option>Vagas.com</option>
-                        <option>Info Jobs</option>
-                        <option>Rio Vagas</option>
-                        <option>Facebook</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputNumero">Telefone</label>
-                      <input type="text" class="form-control" id="inputNumero" placeholder="(DDD) + Número">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputName">Cargo</label>
-                      <select id="input" class="form-control">
-                        <option selected>Selecione...</option>
-                        <option>Consultor de Vendas</option>
-                        <option>Gerente</option>
-                        <option>Promotor de Vendas</option>
-                      </select>
-                    </div>
-                    <div class="form-group row">
-                      <label for="example-datetime-local-input" class="col-4 col-form-label">Data e Hora</label>
-                      <div class="col-12">
-                        <input class="form-control" type="datetime-local" value="2019-03-27T13:45:00"
-                          id="example-datetime-local-input">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputFile">Adicionar currículo</label>
-                    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                    <small id="fileHelp" class="form-text text-muted">Selecione o Currículo do
-                      candidato.</small>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Salvar</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </nav><div class="container mt-2 border-2">
+<div class="card">
+	<h3 class="card-header text-white bg-info">
+	Processos Realizados
+	</h3>
+	<div class="card-body">
+	 <!--tabela-->
       <table class="table table-bordered table-hover">
-        <thead class="thead-dark">
+        <thead>
           <tr>
-            <th scope="col">Nome:</th>
-            <th scope="col">Telefone:</th>
-            <th scope="col">Cargo:</th>
-            <th scope="col">Observações:</th>
-            <th scope="col">Data:</th>
-            <th scope="col">Status:</th>
-            <th scope="col">Finalizar</th>
+            <th scope="col">Nome</th>
+			<th scope="col">Telefone</th>
+            <th scope="col">Cargo</th>
+			<th scope="col">Data</th>
+			<th scope="col">Status</th>
+			<th scope="col">Observação</th>
+			<th scope="col">Opção</th>
           </tr>
         </thead>
-        <tbody>
+		        <tbody>
           <tr>
-            <th scope="row">Gabriel Baltar Pereira</th>
-            <td>(21) 98754-8081</td>
-            <td>Consultor de vendas</td>
+            <td>Gabriella</td>
+            <td>21987099903</td>
+			<td>consultor</td>
+			<td>2019-04-01</td>
+			<td>aprovado</td>
+			<td>N/A</td>
             <td align="center">
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
+              <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
+                data-target="#largeShoes2">Visualizar</button>
             </td>
-            <td>12/04/2019</td>
-            <td class="text-success">Aprovado</td>
-            <td></td>
           </tr>
         </tbody>
-        <tbody>
+		        <tbody>
           <tr>
-            <th scope="row">Gabriel Baltar Pereira</th>
-            <td>(21) 98754-8081</td>
-            <td>Consultor de vendas</td>
-             <td align="center">
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
-            </td>
-            <td>12/04/2019</td>
-            <td class="text-danger">Reprovado</td>
-            <td></td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            <th scope="row">Gabriel Baltar Pereira</th>
-            <td>(21) 98754-8081</td>
-            <td>Consultor de vendas</td>
-             <td align="center">
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
-            </td>
-            <td>12/04/2019</td>
-            <td class="text-light bg-dark">Black List</td>
+            <td>Daniel</td>
+            <td>2199887744</td>
+			<td>consultor</td>
+			<td>2019-04-08</td>
+			<td>aprovado</td>
+			<td>N/A</td>
             <td align="center">
-              <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
-                data-target="#largeShoes1">Visualizar</button>
+              <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
+                data-target="#largeShoes2">Visualizar</button>
             </td>
           </tr>
         </tbody>
-        <tbody>
+		        <tbody>
           <tr>
-            <th scope="row">Gabriel Baltar Pereira</th>
-            <td>(21) 98754-8081</td>
-            <td>Consultor de vendas</td>
-             <td align="center">
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
+            <td>Victor</td>
+            <td>2199787744</td>
+			<td>consultor</td>
+			<td>2019-04-09</td>
+			<td>pendente</td>
+			<td>Teste.</td>
+            <td align="center">
+              <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
+                data-target="#largeShoes2">Visualizar</button>
             </td>
-            <td>12/04/2019</td>
-            <td class="text-success">Aprovado</td>
-            <td></td>
           </tr>
         </tbody>
-        <tbody>
-          <tr>
-            <th scope="row">Gabriel Baltar Pereira</th>
-            <td>(21) 98754-8081</td>
-            <td>Consultor de vendas</td>
-             <td align="center">
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
-            </td>
-            <td>12/04/2019</td>
-            <td class="text-danger">Reprovado</td>
-            <td></td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            <th scope="row">Gabriel Baltar Pereira</th>
-            <td>(21) 98754-8081</td>
-            <td>Consultor de vendas</td>
-             <td align="center">
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
-            </td>
-            <td>12/04/2019</td>
-            <td class="text-success">Aprovado</td>
-            <td></td>
-          </tr>
-        </tbody>
-        <tbody>
-          <tr>
-            <th scope="row">Gabriel Baltar Pereira</th>
-            <td>(21) 98754-8081</td>
-            <td>Consultor de vendas</td>
-             <td align="center">
-                    <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#ExemploModalCentralizado">Visualizar</button>
-            </td>
-            <td>12/04/2019</td>
-            <td class="text-primary">Stand-By</td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!--Modal de visualização-->
-      <div class=" modal fade" id="largeShoes2" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <img src="img/rs.png" style="width: 15rem" class="rounded" alt="imagem-responsiva">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <fieldset disabled>
-                  <div class="form-row">
-                    <div class="form-group col-md-3">
-                      <label for="inputtext4">Nome</label>
-                      <input type="text" class="form-control" id="inputnamel4" placeholder="Nome">
-                    </div>
-                    <div class="form-group col-md-3">
-                      <label for="inputtext4">Sobrenome</label>
-                      <input type="text" class="form-control" id="inputnamel4" placeholder="Sobrenome">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputemail4">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                    </div>
-                    <div class="form-group col-md-3">
-                      <label for="inputname4">Canal de Seleção</label>
-                      <select id="input" class="form-control">
-                        <option selected>Selecione...</option>
-                        <option>Indeed.com</option>
-                        <option>Vagas.com</option>
-                        <option>Info Jobs</option>
-                        <option>Rio Vagas</option>
-                        <option>Facebook</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-3">
-                      <label for="inputNumero4">Telefone</label>
-                      <input type="text" class="form-control" id="inputNumero" placeholder="(DDD) + Número)">
-                    </div>
-                    <div class=" form-group col-md-3">
-                      <label for="inputName">Status do Canditato</label>
-                      <select id="input" class="form-control">
-                        <option selected>Selecione...</option>
-                        <option>Aprovado</option>
-                        <option>Reprovado</option>
-                        <option>Blacklist</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-md-3">
-                      <label for="inputName">Avaliações Realizadas</label>
-                      <select id="input" class="form-control">
-                        <option selected>Selecione...</option>
-                        <option>Dinâmica em grupo</option>
-                        <option>Aplicação de prova</option>
-                        <option>Entrevista individual</option>
-                      </select>
-                    </div>
-                    <div class="form-group row">
-                      <label for="example-datetime-local-input" class="col-4 col-form-label">Data e
-                        Hora</label>
-                      <div class="col-12">
-                        <input class="form-control" type="datetime-local" value="2019-03-27T13:45:00"
-                          id="example-datetime-local-input">
-                      </div>
-                    </div>
-                </fieldset>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!--Modal de Cadastro de funcionários-->
-    <div class="modal fade" id="largeShoes3" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
-      aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <img src="img/rs.png" style="width: 15rem" class="rounded" alt="imagem-responsiva">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <h4>Adicionar Usuário:</h4>
-            <br>
-            <form>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <label for="inputtext4">Nome</label>
-                  <input type="text" class="form-control" id="inputEmail4" placeholder="Nome">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputtext4">Sobrenome</label>
-                  <input type="text" class="form-control" id="inputEmail4" placeholder="Sobrenome">
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputName">Cargo exercido pelo funcionário</label>
-                  <select id="input" class="form-control">
-                    <option selected>Selecione...</option>
-                    <option>Auxiliar</option>
-                    <option>Gerente</option>
-                    <option>Supervisor</option>
-                    <option>Diretor</option>
-                  </select>
-                </div>
-                <div class="form-group col-md-6">
-                  <label for="inputEmail4">Email</label>
-                  <input type="Email" class="form-control" id="inputEmail" placeholder="Email do funcionário">
-                </div>
-                <div class="form-group row">
-                  <label for="example-date-input" class="col-6 col-form-label">Data de nascimento</label>
-                  <div class="col-11">
-                    <input class="form-control" type="date" value="2019-03-27T13" id="example-date-input">
-                  </div>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary">Adicionar</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bootstrap e JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		      </table>
+	  <!--tabela-->
+	</div>	
+</div>
+</div>	<!-- Bootstrap e JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="http://10.10.1.56/sistema/vendor/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Efeito do menu laretal -->
     <script>
