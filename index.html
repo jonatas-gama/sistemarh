@@ -28,14 +28,14 @@
       <div style="width: 200px; height:70px;" class="sidebar-heading"><img src="http://10.10.1.56/sistema/vendor/dist/img/rs.png" class="rounded" style="width: 10rem;" alt="imagem-responsiva">
       </div>
       <div class="list-group list-group-flush">
-        <a href="http://10.10.1.56/sistema/auxiliar" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line fa-lg"></i> Relatórios</a>
-        <a href="http://10.10.1.56/sistema/auxiliar/processosagendados" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt fa-lg"></i> Processos Agendados</a>
-        <a href="http://10.10.1.56/sistema/auxiliar/processosrealizados" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check fa-lg"></i> Processos Realizados</a>
-        <a href="http://10.10.1.56/sistema/auxiliar/visualizafuncionarios" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users fa-lg"></i> Funcionários</a>
-        <a href="#" data-toggle="modal" data-target="#largeShoes1"
+        <a href="#" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line fa-lg"></i> Relatórios</a>
+        <a href="index.html" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt fa-lg"></i> Processos Agendados</a>
+        <a href="processosrl.html" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check fa-lg"></i> Processos Realizados</a>
+        <a href="funcionarios.html" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users fa-lg"></i> Funcionários</a>
+        <a href="#" data-toggle="modal" data-target="#largeShoes2"
           class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus fa-lg"></i> Cadastrar Candidato</a>
-        <!--<a href="#" data-toggle="modal" data-target="#largeShoes3"
-          class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>-->
+        <a href="#" data-toggle="modal" data-target="#largeShoes7"
+          class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>
       </div>
     </div>
 
@@ -93,7 +93,7 @@
 			<td> 14:57</td>
             <td align="center">
               <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
-                data-target="#largeShoes2">Visualizar</button>
+                data-target="#largeShoes3">Visualizar</button>
             </td>
           </tr>
         </tbody>
@@ -108,7 +108,7 @@
 			<td>:05</td>
             <td align="center">
               <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
-                data-target="#largeShoes2">Visualizar</button>
+                data-target="#largeShoes3">Visualizar</button>
             </td>
           </tr>
         </tbody>
@@ -123,7 +123,7 @@
 			<td>:55</td>
             <td align="center">
               <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
-                data-target="#largeShoes2">Visualizar</button>
+                data-target="#largeShoes3">Visualizar</button>
             </td>
           </tr>
         </tbody>
@@ -131,7 +131,225 @@
 	  <!--tabela-->
 	</div>	
 </div>
-</div>	<!-- Bootstrap e JavaScript -->
+</div>
+  <!--Modal de Cadatro de Candidatos-->
+  <div class="container-fluid">
+    <div class="modal fade" id="largeShoes2" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="http://10.10.1.56/sistema/vendor/dist/img/rs.png" style="width: 15rem" class="rounded" alt="imagem-responsiva">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h4>Cadastrar Candidatos:</h4>
+            <br>
+            <form action="http://10.10.1.56/sistema/auxiliar/cadastrarcandidato" method="post">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputtext4">Nome</label>
+                  <input type="text" class="form-control" id="inputEmail4" name="nome" placeholder="Nome">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputtext4">Sobrenome</label>
+                  <input type="text" class="form-control" id="inputEmail4" name="sobrenome" placeholder="Sobrenome">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Email">
+                </div>
+        <div class="form-group col-md-6">
+          <label for="inputCurriculo">Canal de Seleção</label>
+          <select class="form-control" id="inputCurriculo" name="curriculo">
+           
+              <option value="1">Indeed</option>
+           
+              <option value="2">Facebook</option>
+           
+              <option value="3">Vagas.com</option>
+           
+              <option value="4">InfoJobs</option>
+                          
+          </select>
+        </div>
+                <div class="form-group col-md-6">
+                  <label for="inputNumero">Telefone</label>
+                  <input type="text" class="form-control" id="inputNumero" name="telefone" placeholder="(DDD) + Número">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputName">Cargo</label>
+          <select class="form-control" id="inputCargo" name="cargo">
+           
+              <option value="1">consultor</option>
+                          
+          </select>
+                </div>
+                <div class="form-group row">
+                  <label for="example-datetime-local-input" class="col-4 col-form-label">Data e Hora</label>
+                  <div class="col-12">
+                    <input class="form-control" type="datetime-local" name="data"
+                      id="example-datetime-local-input">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Observações:</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" name="observacao" rows="3"></textarea>
+                </div>
+              <div class="form-group">
+                <label for="exampleInputFile">Adicionar currículo</label>
+                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                <small id="fileHelp" class="form-text text-muted">Selecione o Currículo do
+                  candidato.</small>
+              </div>
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!--Modal de Finalização de agendamento-->
+   <div class="container-fluid">
+    <div class="modal fade" id="largeShoes3" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <img src="http://10.10.1.56/sistema/vendor/dist/img/rs.png" style="width: 15rem" class="rounded" alt="imagem-responsiva">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h4>Cadastrar Candidatos:</h4>
+            <br>
+            <form action="http://10.10.1.56/sistema/auxiliar/cadastrarcandidato" method="post">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="inputtext4">Nome</label>
+                  <input type="text" class="form-control" id="inputEmail4" name="nome" placeholder="Nome">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputtext4">Sobrenome</label>
+                  <input type="text" class="form-control" id="inputEmail4" name="sobrenome" placeholder="Sobrenome">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputEmail4">Email</label>
+                  <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Email">
+                </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputCurriculo">Canal de Seleção</label>
+                        <select class="form-control" id="inputCurriculo" name="curriculo">
+                         
+                                <option value="1">Indeed</option>
+                         
+                                <option value="2">Facebook</option>
+                         
+                                <option value="3">Vagas.com</option>
+                         
+                                <option value="4">InfoJobs</option>
+                                                        
+                        </select>
+                    </div>
+                <div class="form-group col-md-6">
+                  <label for="inputNumero">Telefone</label>
+                  <input type="text" class="form-control" id="inputNumero" name="telefone" placeholder="(DDD) + Número">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputName">Cargo</label>
+                        <select class="form-control" id="inputCargo" name="cargo">
+                         
+                                <option value="1">consultor</option>
+                                                        
+                        </select>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="example-datetime-local-input" class="col-4 col-form-label">Data e Hora</label>
+                    <input class="form-control" type="datetime-local" name="data"
+                      id="example-datetime-local-input">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputCurriculo">Status</label>
+                  <select class="form-control" id="inputCurriculo" name="curriculo">
+                   
+                          <option value="1">Aprovado</option>
+                   
+                          <option value="2">Reprovado</option>
+                   
+                          <option value="3">Stand-Bie</option>
+                   
+                          <option value="4">Black-list</option>
+                                                  
+                  </select>
+              </div>
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Observações:</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" name="observacao" rows="3"></textarea>
+                </div>
+              <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <!--Cadastro de Usuário Modal-->
+  <div class="container-fluid">
+      <div class="modal fade" id="largeShoes7" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <img src="http://10.10.1.56/sistema/vendor/dist/img/rs.png" style="width: 15rem" class="rounded" alt="imagem-responsiva">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h4>Visualizar</h4>
+              <br>
+              <form action="http://10.10.1.56/sistema/auxiliar/cadastrarcandidato" method="post">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputtext4">Nome</label>
+                    <input type="text" class="form-control" id="inputEmail4" name="nome" placeholder="Nome">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputtext4">Sobrenome</label>
+                    <input type="text" class="form-control" id="inputEmail4" name="sobrenome" placeholder="Sobrenome">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Email">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputName">Cargo</label>
+            <select class="form-control" id="inputCargo" name="cargo">
+             
+                <option value="1">consultor</option>
+                            
+            </select>
+                  </div>
+                  <div class="form-group col-md-8">
+                      <label for="example-datetime-local-input" class="col-form-label">Data de Nascimento</label>
+                        <input class="form-control" type="datetime-local" name="data"
+                          id="example-datetime-local-input">
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Bootstrap e JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="http://10.10.1.56/sistema/vendor/dist/js/bootstrap.bundle.min.js"></script>
 
