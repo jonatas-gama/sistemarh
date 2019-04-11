@@ -11,10 +11,10 @@
   <title>Cadastro de Funcionários</title>
 
   <!-- Bootstrap com CSS -->
-  <link href="http://10.10.1.56/sistema/vendor/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <a href="https://icons8.com/icon/3095/hamburger-menu"></a>
   <!-- CSS-->
-  <link href="http://10.10.1.56/sistema/vendor/dist/css/estilo1.css" rel="stylesheet">
+  <link  href="css/estilo1.css" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
@@ -25,7 +25,7 @@
 
     <!-- Menu Lateral -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div style="width: 200px; height:70px;" class="sidebar-heading"><img src="http://10.10.1.56/sistema/vendor/dist/img/rs.png" class="rounded" style="width: 10rem;" alt="imagem-responsiva">
+      <div style="width: 200px; height:70px;" class="sidebar-heading"><img src="img/rs.png" class="rounded" style="width: 10rem;" alt="imagem-responsiva">
       </div>
       <div class="list-group list-group-flush">
         <a href="" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line fa-lg"></i> Relatórios</a>
@@ -67,7 +67,7 @@
 	Processos Realizados
 	</h3>
 	<div class="card-body">
-	 <!--tabela-->
+    <!--tabela-->
       <table class="table table-bordered table-hover">
         <thead>
           <tr>
@@ -80,7 +80,7 @@
 			<th scope="col">Opção</th>
           </tr>
         </thead>
-		        <tbody>
+        <tbody>
           <tr>
             <td>Gabriella</td>
             <td>21987099903</td>
@@ -94,7 +94,7 @@
             </td>
           </tr>
         </tbody>
-		        <tbody>
+        <tbody>
           <tr>
             <td>Daniel</td>
             <td>2199887744</td>
@@ -108,7 +108,7 @@
             </td>
           </tr>
         </tbody>
-		        <tbody>
+        <tbody>
           <tr>
             <td>Victor</td>
             <td>2199787744</td>
@@ -122,8 +122,8 @@
             </td>
           </tr>
         </tbody>
-		      </table>
-	  <!--tabela-->
+        </table>
+      <!--tabela-->
 	</div>	
 </div>
 <!--Modal de Cadatro de Candidatos-->
@@ -133,7 +133,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <img src="http://10.10.1.56/sistema/vendor/dist/img/rs.png" style="width: 15rem" class="rounded" alt="imagem-responsiva">
+          <img src="img/rs.png" style="width: 15rem" class="rounded" alt="imagem-responsiva">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -158,15 +158,10 @@
       <div class="form-group col-md-6">
         <label for="inputCurriculo">Canal de Seleção</label>
         <select class="form-control" id="inputCurriculo" name="curriculo">
-         
             <option value="1">Indeed</option>
-         
             <option value="2">Facebook</option>
-         
             <option value="3">Vagas.com</option>
-         
-            <option value="4">InfoJobs</option>
-                        
+            <option value="4">InfoJobs</option>      
         </select>
       </div>
               <div class="form-group col-md-6">
@@ -176,7 +171,7 @@
               <div class="form-group col-md-6">
                 <label for="inputName">Cargo</label>
         <select class="form-control" id="inputCargo" name="cargo">
-         
+
             <option value="1">consultor</option>
                         
         </select>
@@ -238,15 +233,10 @@
                     <div class="form-group col-md-6">
                         <label for="inputCurriculo">Canal de Seleção</label>
                         <select class="form-control" id="inputCurriculo" name="curriculo">
-                         
                                 <option value="1">Indeed</option>
-                         
                                 <option value="2">Facebook</option>
-                         
                                 <option value="3">Vagas.com</option>
-                         
-                                <option value="4">InfoJobs</option>
-                                                        
+                                <option value="4">InfoJobs</option>                      
                         </select>
                     </div>
                 <div class="form-group col-md-6">
@@ -256,12 +246,10 @@
                 <div class="form-group col-md-6">
                   <label for="inputName">Cargo</label>
                         <select class="form-control" id="inputCargo" name="cargo">
-                         
-                                <option value="1">consultor</option>
-                                                        
+                                <option value="1">Consultor</option>                         
                         </select>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-2">
                 <div class="custom-control custom-checkbox">
                   <input type="checkbox" class="custom-control-input" id="customCheck1">
                   <label class="custom-control-label" for="customCheck1">Aprovado</label>
@@ -279,8 +267,12 @@
                   <label class="custom-control-label" for="customCheck4">Black-List</label>
                 </div>
                 </div>
-                <div class="form-group col-md-9">
+                <div class="form-group col-md-5">
                   <label for="inputName">Entrevistador</label>
+                  <input class="form-control" id="disabledInput" type="text" placeholder="Selecione..." disabled>
+                </div>
+                <div class="form-group col-md-5">
+                  <label for="inputName">Motivo da Reprovação</label>
                   <input class="form-control" id="disabledInput" type="text" placeholder="Selecione..." disabled>
                 </div>
                 <div class="form-group col-md-7">
@@ -335,7 +327,7 @@
                   <div class="form-group col-md-6">
                     <label for="inputName">Cargo</label>
             <select class="form-control" id="inputCargo" name="cargo">
-             
+                                                        
                 <option value="1">consultor</option>
                             
             </select>
@@ -353,8 +345,9 @@
       </div>
     </div>
 <!-- Bootstrap e JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="http://10.10.1.56/sistema/vendor/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <!-- Efeito do menu laretal -->
     <script>
