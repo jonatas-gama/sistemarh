@@ -15,6 +15,7 @@
   <a href="https://icons8.com/icon/3095/hamburger-menu"></a>
   <!-- CSS-->
   <link href="css/estilo1.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
 
@@ -24,41 +25,38 @@
 
     <!-- Menu Lateral -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading"><img src="img/rs.png" style="width: 12rem" class="rounded" alt="imagem-responsiva">
+      <div style="width: 200px; height:70px;" class="sidebar-heading"><img src="img/rs.png" class="rounded" style="width: 10rem;" alt="imagem-responsiva">
       </div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Relatórios</a>
-        <a href="processosag.html" class="list-group-item list-group-item-action bg-light">Processos Agendados</a>
-        <a href="processosrl.html" class="list-group-item list-group-item-action bg-light">Processos Realizados</a>
-        <a href="index.html" class="list-group-item list-group-item-action bg-light">Gestão Candidato</a>
+        <a href="#" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line fa-lg"></i> Relatórios</a>
+        <a href="processosag.html" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt fa-lg"></i> Processos Agendados</a>
+        <a href="processosrl.html" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check fa-lg"></i> Processos Realizados</a>
+        <a href="index.html" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users fa-lg"></i> Funcionários</a>
         <a href="#" data-toggle="modal" data-target="#largeShoes1"
-          class="list-group-item list-group-item-action bg-light">Cadastrar Candidato</a>
-        <a href="#" data-toggle="modal" data-target="#largeShoes7"
-          class="list-group-item list-group-item-action bg-light">Visualizar</a>
+          class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus fa-lg"></i> Cadastrar Candidato</a>
         <a href="#" data-toggle="modal" data-target="#largeShoes3"
-          class="list-group-item list-group-item-action bg-light">Adicionar Usuário</a>
+          class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>
       </div>
     </div>
 
     <!-- Menu Horizontal-->
     <div id="page-content-wrapper">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom col-12">
         <button class="btn btn-light" id="menu-toggle"><img
             src="https://img.icons8.com/metro/26/000000/menu.png"></button>
-        <nav class="navbar navbar-light bg-light">
-          <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <nav class="navbar navbar-light bg-light col-9">
+          <form class="form-inline col-12">
+            <input class="form-control col-10 mr-sm-2 border-top-0 border-right-0 border-left-0" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
           </form>
         </nav>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="col-2 collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">Opções</a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="index2.html">Trocar Usuário</a>
-                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="index2.html">Logout</a>
               </div>
             </li>
           </ul>
@@ -144,8 +142,11 @@
           </div>
         </div>
       </div>
+	  <!--Modal-->
+	  
+	  <!--tabela-->
       <table class="table table-bordered table-hover">
-        <thead class="thead-dark">
+        <thead>
           <tr>
             <th scope="col">Numeração:</th>
             <th scope="col">Nome:</th>
@@ -163,9 +164,9 @@
             <td>Rua São João</td>
             <td>gabriel.baltar21@hotmail.com</td>
             <td align="center">
-              <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
+              <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
                 data-target="#largeShoes2">Visualizar</button>
-              <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                 data-target="#largeShoes1">Editar</button>
             </td>
           </tr>
@@ -176,9 +177,9 @@
             <td>Rua 10</td>
             <td>@anamaria18@gmail.com</td>
             <td align="center">
-              <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
+              <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
                 data-target="#largeShoes2">Visualizar</button>
-              <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                 data-target="#largeShoes1">Editar</button>
             </td>
           </tr>
@@ -189,9 +190,9 @@
             <td>Rua Mercúrio</td>
             <td>@lucas.outlook.com</td>
             <td align="center">
-              <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
+              <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
                 data-target="#largeShoes2">Visualizar</button>
-              <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                 data-target="#largeShoes1">Editar</button>
             </td>
           </tr>
@@ -203,9 +204,9 @@
           <td>Rua São João</td>
           <td>gabriel.baltar21@hotmail.com</td>
           <td align="center">
-            <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
+            <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
               data-target="#largeShoes2">Visualizar</button>
-            <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
+            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
               data-target="#largeShoes1">Editar</button>
           </td>
         </tr>
@@ -217,9 +218,9 @@
             <td>Rua São João</td>
             <td>gabriel.baltar21@hotmail.com</td>
             <td align="center">
-              <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
+              <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
                 data-target="#largeShoes2">Visualizar</button>
-              <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                 data-target="#largeShoes1">Editar</button>
             </td>
           </tr>
@@ -232,14 +233,15 @@
             <td>Rua São João</td>
             <td>gabriel.baltar21@hotmail.com</td>
             <td align="center">
-              <button type=" button" class="btn btn-dark btn-sm" data-toggle="modal"
+              <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
                 data-target="#largeShoes2">Visualizar</button>
-              <button type="button" class="btn btn-dark btn-sm" data-toggle="modal"
+              <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                 data-target="#largeShoes1">Editar</button>
             </td>
           </tr>
         </tbody>
       </table>
+	  <!--tabela-->
 
       <!--Modal de visualização-->
       <div class=" modal fade" id="largeShoes2" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
@@ -316,6 +318,7 @@
         </div>
       </div>
     </div>
+	<!--modal-->
     
     <!--Modal de Cadastro de funcionários-->
     <div class="modal fade" id="largeShoes3" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge"
@@ -368,6 +371,7 @@
         </div>
       </div>
     </div>
+	<!--modal-->
 
     <!-- Bootstrap e JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
