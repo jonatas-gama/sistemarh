@@ -9,10 +9,10 @@
 
 	<title>Funcionário</title>
 	<!-- Bootstrap com CSS -->
-	<link rel="stylesheet" href="<?=base_url("vendor/css/bootstrap.css");?>">
+	<link rel="stylesheet" href="<?=base_url("vendor/bootstrap/css/bootstrap.css");?>">
 	<a href="https://icons8.com/icon/3095/hamburger-menu"></a>
 	<!-- CSS-->
-	<link href="<?=base_url("vendor/css/estilo1.css");?>" rel="stylesheet">
+	<link href="<?=base_url("vendor/dist/css/estilo1.css");?>" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
@@ -23,7 +23,7 @@
 
 		<!-- Menu Lateral -->
 		<div class="border-right bg-light " id="sidebar-wrapper">
-			<div style="width: 200px; height:70px;" class="sidebar-heading"><img src="<?=base_url("vendor/img/rs.png");?>"
+			<div style="width: 200px; height:70px;" class="sidebar-heading"><img src="<?=base_url("vendor/dist/img/rs.png");?>"
 					class="rounded" style="width: 10rem;" alt="imagem-responsiva">
 			</div>
 			<div class="list-group list-group-flush">
