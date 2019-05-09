@@ -77,7 +77,7 @@
  				<div class="col-2 collapse navbar-collapse" id="navbarSupportedContent">
  					<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
  						<li class="nav-item dropdown">
- 							<a class="nav-link dropdown-toggle text-success" id="navbarDropdown" role="button" data-toggle="dropdown"
+ 							<a href="#" class="nav-link dropdown-toggle text-success" id="navbarDropdown" role="button" data-toggle="dropdown"
  								aria-haspopup="true" aria-expanded="false">Olá Usuário</a>
  							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
  								<a class="dropdown-item" href="<?=base_url('funcionarios/logout');?>">Logout</a>
