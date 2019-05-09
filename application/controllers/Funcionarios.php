@@ -32,6 +32,24 @@ class Funcionarios extends CI_Controller {
         $this->load->view('pages/funcionarios/ferias');
         $this->load->view('template/funcionarios/footer');
     }
+    public function chamado ()
+    {
+        $this->load->view('template/funcionarios/header');
+        $this->load->view('pages/funcionarios/chamado');
+        $this->load->view('template/funcionarios/footer');
+    }
+    public function finalizados ()
+    {
+        $this->load->view('template/funcionarios/header');
+        $this->load->view('pages/funcionarios/finalizados');
+        $this->load->view('template/funcionarios/footer');
+    }
+    public function andamento ()
+    {
+        $this->load->view('template/funcionarios/header');
+        $this->load->view('pages/funcionarios/andamento');
+        $this->load->view('template/funcionarios/footer');
+    }
     public function logout()
     {
         $dadosSessao['cliente'] = NULL;

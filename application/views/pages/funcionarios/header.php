@@ -9,7 +9,7 @@
 
 	<title>Funcionário</title>
 	<!-- Bootstrap com CSS -->
-	<link rel="stylesheet" href="<?=base_url("vendor/bootstrap/css/bootstrap.css");?>">
+	<link rel="stylesheet" href="<?=base_url("vendor/css/bootstrap.css");?>">
 	<a href="https://icons8.com/icon/3095/hamburger-menu"></a>
 	<!-- CSS-->
 	<link href="<?=base_url("vendor/dist/css/estilo1.css");?>" rel="stylesheet">
@@ -38,6 +38,20 @@
 				<a href="#" data-toggle="modal" data-target="#largeShoes2"
           class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;"
             class="fas fa-user-plus fa-lg"></i>Requerimentos</a>
+						
+				<a href="#" class="list-group-item list-group-item-action bg-light" data-toggle="collapse" data-target="#collapseExample" role="" aria-expanded="false" aria-controls="collapseExample"><i style="color: #59BF3F;"class="fas fa-bullhorn fa-lg"></i>Chamados</a>
+					<div class="collapse" id="collapseExample1">
+							<a href="<?=base_url("funcionarios/chamado");?>" class="list-group-item list-group-item-action bg-light">
+							<i style="color: #4B787B;"class="fas fa-calendar-minus fa-lg"></i>Abrir Chamado</a>
+					</div>
+					<div class="collapse" id="collapseExample2">
+							<a href="<?=base_url("funcionarios/finalizados");?>" class="list-group-item list-group-item-action bg-light">
+							<i style="color: #320DEC;"class="fas fa-calendar-check fa-lg"></i>Finalizados</a>
+					</div>
+					<div class="collapse" id="collapseExample3">
+							<a href="<?=base_url("funcionarios/andamento");?>" class="list-group-item list-group-item-action bg-light">
+							<i style="color: #7CEC0D;"class="fas fa-exclamation-circle fa-lg"></i> Em Andamento</a>
+					</div>
         <!--<a href="#" data-toggle="modal" data-target="#largeShoes7"
           class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;"
             class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>-->
@@ -68,10 +82,3 @@
 					</ul>
 				</div>
 			</nav>
-			<div class="container mt-2 border-2">
-				<div class="card">
-					<h3 class="card-header text-white bg-success">
-						Perfil
-					</h3>
-				</div>
-			</div>
