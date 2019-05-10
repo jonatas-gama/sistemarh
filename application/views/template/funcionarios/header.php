@@ -28,32 +28,32 @@
  			</div>
  			<div class="list-group list-group-flush">
  				<a href="<?=base_url("funcionarios/index");?>" class="list-group-item list-group-item-action bg-light"><i
- 						style="color: Tomato;" class="fas fa-users fa-lg"></i>Perfil</a>
+ 						style="color: Tomato;" class="fas fa-users"></i>Perfil</a>
  				<a href="<?=base_url("funcionarios/vagasabertas");?>"
  					class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;"
- 						class="fas fa-calendar-alt fa-lg"></i>Vagas Abertas</a>
+ 						class="fas fa-calendar-alt"></i>Vagas Abertas</a>
  				<a href="<?=base_url("funcionarios/contracheques");?>"
  					class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;"
  						class="far fa-list-alt fa-lg"></i>Contra cheque</a>
  				<a href="<?=base_url("funcionarios/ferias");?>" class="list-group-item list-group-item-action bg-light"><i
- 						style="color: chocolate;" class="fas fa-calendar-check fa-lg"></i>Férias</a>
+ 						style="color: chocolate;" class="fas fa-calendar-check"></i>Férias</a>
 
 
  				<a href="#" class="list-group-item list-group-item-action bg-light" data-toggle="collapse"
  					data-target="#collapseExample" role="" aria-expanded="false" aria-controls="collapseExample"><i
- 						style="color: #59BF3F;" class="fas fa-bullhorn fa-lg"></i>Chamados</a>
+ 						style="color: #59BF3F;" class="fas fa-bullhorn"></i>Chamados</a>
 
  				<div class="collapse" id="collapseExample">
  					<a href="<?=base_url("funcionarios/chamado");?>" class="list-group-item list-group-item-action bg-light">
- 						<i style="color: #4B787B;" class="fas fa-calendar-minus fa-lg"></i>Abrir Chamado</a>
+ 						<i style="color: #4B787B;" class="fas fa-calendar-minus"></i>Abrir Chamado</a>
  				</div>
  				<div class="collapse" id="collapseExample">
  					<a href="<?=base_url("funcionarios/finalizados");?>" class="list-group-item list-group-item-action bg-light">
- 						<i style="color: #320DEC;" class="fas fa-calendar-check fa-lg"></i>Finalizados</a>
+ 						<i style="color: #320DEC;" class="fas fa-calendar-check"></i>Finalizados</a>
  				</div>
  				<div class="collapse" id="collapseExample">
  					<a href="<?=base_url("funcionarios/andamento");?>" class="list-group-item list-group-item-action bg-light">
- 						<i style="color: #7CEC0D;" class="fas fa-exclamation-circle fa-lg"></i> Em Andamento</a>
+ 						<i style="color: #7CEC0D;" class="fas fa-exclamation-circle"></i> Em Andamento</a>
  				</div>
 
  				<!--<a href="#" data-toggle="modal" data-target="#largeShoes7"

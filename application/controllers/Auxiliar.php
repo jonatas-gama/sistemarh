@@ -92,4 +92,14 @@ class Auxiliar extends CI_Controller {
 		$this->load->view('pages/teste/body/bodyindex');
 		$this->load->view('pages/teste/footer/footer');
 	}
+	
+	public function buscarProcessoAgendado($id){
+		$processo = $this->auxiliar_model->buscarProcessoAgendado($id)->result();
+		echo json_encode($processo);
+	}	
+	
+	public function buscarProcessoRealizado($id){
+		$realizado = $this->auxiliar_model->buscarProcessoRealizado($id)->result();
+		echo json_encode($realizado);
+	}		
 }

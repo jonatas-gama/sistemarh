@@ -12,6 +12,7 @@ class Login extends CI_Controller{
 		$gerente  		= $this->padrao_model->selectGerente($login,$senha);
 		$supervisor		= $this->padrao_model->selectSupervisor($login,$senha);
 		$auxiliar  		= $this->padrao_model->selectAuxiliar($login,$senha);
+		$funcionario  		= $this->padrao_model->selectFuncionario($login,$senha);
 		
 		if($gerente){
 			$dadosSessao['funcionario'] = $gerente;
@@ -43,10 +44,20 @@ class Login extends CI_Controller{
 			$this->load->view('pages/auxiliar/relatorios');
 			$this->load->view('template/auxiliar/footer');
 			
+		}elseif($funcionario){
+			$dadosSessao['funcionario'] = $auxiliar;
+			$dadosSessao['logado'] = TRUE;
+			$dadosSessao['msg'] = "";
+			$this->session->set_userdata($dadosSessao);
+			$data['title'] = "Área do Colaborador";
+			$this->load->view('template/funcionarios/header', $data);
+			$this->load->view('pages/funcionarios/index');
+			$this->load->view('template/funcionarios/footer');			
+		
 		}else{
 			$dadosSessao['funcionario'] = NULL;
 			$dadosSessao['logado'] = FALSE;
-			$dadosSessao['msg'] = "UsuÃ¡rio ou senha incorreta";
+			$dadosSessao['msg'] = "UsuÃ?rio ou senha incorreta";
 			$this->session->set_userdata($dadosSessao);                
 			redirect(base_url("/"));			
 		}	

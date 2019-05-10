@@ -28,7 +28,7 @@
 			<td><?=$realizado->observacao;?></td>
             <td align="center">
               <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
-                data-target="#visualizarProcessos">Visualizar</button>
+                data-target="#visualizarProcessos" onclick="buscaRealizado('<?=$realizado->id;?>')">Visualizar</button>
             </td>
           </tr>
         </tbody>

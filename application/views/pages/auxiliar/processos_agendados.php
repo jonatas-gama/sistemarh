@@ -30,7 +30,7 @@
 			<td><?=$agendado->hora;?></td>
             <td align="center">
               <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
-                data-target="#finalizaProcesso" onclick="finalizaProcesso(<?=$agendado->id;?>)">Visualizar</button>
+                data-target="#finalizaProcesso" onclick="buscaAgendado(<?=$agendado->id;?>)">Visualizar</button>
             </td>
           </tr>
         </tbody>

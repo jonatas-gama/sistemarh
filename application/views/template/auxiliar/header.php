@@ -28,12 +28,12 @@
       <div style="width: 200px; height:70px;" class="sidebar-heading"><img src="<?=base_url('vendor/dist/img/rs.png');?>" class="rounded" style="width: 10rem;" alt="imagem-responsiva">
       </div>
       <div class="list-group list-group-flush">
-        <a href="<?=base_url('auxiliar');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line fa-lg"></i> Relatórios</a>
-        <a href="<?=base_url('auxiliar/processosagendados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt fa-lg"></i> Processos Agendados</a>
-        <a href="<?=base_url('auxiliar/processosrealizados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check fa-lg"></i> Processos Realizados</a>
-        <a href="<?=base_url('auxiliar/visualizafuncionarios');?>" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users fa-lg"></i> Funcionários</a>
+        <a href="<?=base_url('auxiliar');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line"></i> Relatórios</a>
+        <a href="<?=base_url('auxiliar/processosagendados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt"></i>Processos Agendados</a>
+        <a href="<?=base_url('auxiliar/processosrealizados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check"></i> Processos Realizados</a>
+        <a href="<?=base_url('auxiliar/visualizafuncionarios');?>" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users"></i> Funcionários</a>
         <a href="#" data-toggle="modal" data-target="#largeShoes1"
-          class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus fa-lg"></i> Cadastrar Candidato</a>
+          class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus"></i>Cadastrar Candidato</a>
         <!--<a href="#" data-toggle="modal" data-target="#largeShoes3"
           class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>-->
       </div>
