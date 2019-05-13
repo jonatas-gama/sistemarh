@@ -9,8 +9,8 @@
         <thead>
           <tr>
             <th scope="col">Nome:</th>
-            <th scope="col">Telefone:</th>
             <th scope="col">Email:</th>
+			<th scope="col">Usuário:</th>
 			<th scope="col">Cargo:</th>
             <th scope="col">Opções:</th>
           </tr>
@@ -19,11 +19,11 @@
         <tbody>
           <tr>
             <td><?=$funcionario->nome;?></td>
-            <td><?=$funcionario->telefone;?></td>
             <td><?=$funcionario->email;?></td>
+			<td><?=$funcionario->usuario;?></td>
             <td><?=$funcionario->cargo;?></td>
             <td align="center">
-              <button type=" button" class="btn btn-success btn-sm" data-toggle="modal"
+              <button type=" button" class="btn btn-success btn-sm" onclick="buscarFuncionario('<?=$funcionario->id;?>')" data-toggle="modal"
                 data-target="#visualizaFunc">Visualizar</button>
               <!--<button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                 data-target="#largeShoes1">Editar</button>-->

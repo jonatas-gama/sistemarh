@@ -24,6 +24,21 @@
 				document.getElementById('observacao').value = data[0].observacao;				
 				console.log(data);
 			});
+			
+			
+		}		
+		
+		function buscarFuncionario(id){
+			$.getJSON("<?=base_url('auxiliar/buscarFuncionario/');?>"+id, function(data){
+				document.getElementById('nome').value = data[0].nome;
+				document.getElementById('sobrenome').value = data[0].sobrenome;
+				document.getElementById('email').value = data[0].email;
+				document.getElementById('dt_nascimento').value = data[0].dt_nascimento;
+				document.getElementById('usuario').value = data[0].usuario;
+				console.log(data);
+			});
+			
+			
 		}		
 	</script>
 	

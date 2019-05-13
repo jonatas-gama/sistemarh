@@ -66,7 +66,10 @@ class Auxiliar extends CI_Controller {
 	public function processosAgendados()
 	{
 		$dados['title'] = "Auxiliar | Processos Agendados";
+		$dados['curriculo'] = $this->auxiliar_model->listarCurriculo()->result();		
 		$dados['agendados'] = $this->auxiliar_model->listarAgendados()->result();
+		$dados['cargos'] = $this->auxiliar_model->listarCargos()->result();	
+		$dados['status'] = $this->auxiliar_model->listarStatus()->result();		
 		$this->load->view('template/auxiliar/header', $dados);
 		$this->load->view('pages/auxiliar/processos_agendados', $dados);
 		$this->load->view('template/auxiliar/footer');
@@ -101,5 +104,10 @@ class Auxiliar extends CI_Controller {
 	public function buscarProcessoRealizado($id){
 		$realizado = $this->auxiliar_model->buscarProcessoRealizado($id)->result();
 		echo json_encode($realizado);
-	}		
+	}
+	
+	public function buscarFuncionario($id){
+		$realizado = $this->auxiliar_model->buscarFuncionario($id)->result();
+		echo json_encode($realizado);
+	}	
 }

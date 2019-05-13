@@ -28,14 +28,14 @@
       <div style="width: 200px; height:70px;" class="sidebar-heading"><img src="<?=base_url('vendor/dist/img/rs.png');?>" class="rounded" style="width: 10rem;" alt="imagem-responsiva">
       </div>
       <div class="list-group list-group-flush">
-        <a href="<?=base_url('gerente');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line fa-lg"></i> Relatórios</a>
-        <a href="<?=base_url('gerente/processosagendados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt fa-lg"></i> Processos Agendados</a>
-        <a href="<?=base_url('gerente/processosrealizados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check fa-lg"></i> Processos Realizados</a>
-        <a href="<?=base_url('gerente/visualizafuncionarios');?>" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users fa-lg"></i> Funcionários</a>
+        <a href="<?=base_url('gerente');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line"></i>Relatórios</a>
+        <a href="<?=base_url('gerente/processosagendados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt"></i>Processos Agendados</a>
+        <a href="<?=base_url('gerente/processosrealizados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check"></i>Processos Realizados</a>
+        <a href="<?=base_url('gerente/visualizafuncionarios');?>" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users"></i>Funcionários</a>
         <a href="#" data-toggle="modal" data-target="#largeShoes1"
-          class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus fa-lg"></i> Cadastrar Candidato</a>
+          class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus"></i>Cadastrar Candidato</a>
         <a href="#" data-toggle="modal" data-target="#adcionaUsuario"
-          class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>
+          class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card"></i>Adicionar Usuário</a>
       </div>
     </div>
 
@@ -54,7 +54,7 @@
           <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Opções</a>
+                aria-haspopup="true" aria-expanded="false">Olá <?=$this->session->userdata('funcionario')[0]->nome;?></a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="<?=base_url('login/logout');?>">Logout</a>
               </div>

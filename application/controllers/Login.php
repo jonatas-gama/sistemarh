@@ -45,7 +45,7 @@ class Login extends CI_Controller{
 			$this->load->view('template/auxiliar/footer');
 			
 		}elseif($funcionario){
-			$dadosSessao['funcionario'] = $auxiliar;
+			$dadosSessao['funcionario'] = $funcionario;
 			$dadosSessao['logado'] = TRUE;
 			$dadosSessao['msg'] = "";
 			$this->session->set_userdata($dadosSessao);

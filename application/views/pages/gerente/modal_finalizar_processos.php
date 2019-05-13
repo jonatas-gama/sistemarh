@@ -47,26 +47,16 @@
                         </select>
                 </div>
                 <div class="form-group col-md-2">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">Aprovado</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2">Reprovado</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3">
-                  <label class="custom-control-label" for="customCheck3">Stand-Bie</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck4">
-                  <label class="custom-control-label" for="customCheck4">Black-List</label>
-                </div>
+					<?php foreach($status as $st){; ?> 
+						<div class="custom-control custom-radio">
+							<input type="radio" name="status" class="custom-control-input" id="<?=$st->id_status;?>">	
+							<label class="custom-control-label" for="<?=$st->id_status;?>"><?=$st->status;?></label>						
+						</div>
+					<?php }; ?>	
                 </div>
                 <div class="form-group col-md-5">
                   <label for="inputName">Entrevistador</label>
-                  <input class="form-control" id="disabledInput" type="text" placeholder="Selecione..." disabled>
+                  <input class="form-control" id="disabledInput" type="text" value="<?=$this->session->userdata('funcionario')[0]->nome;?>" disabled>
                 </div>
                 <div class="form-group col-md-5">
                   <label for="inputName">Motivo da Reprovação</label>
