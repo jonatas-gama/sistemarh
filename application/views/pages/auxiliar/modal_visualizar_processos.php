@@ -48,19 +48,19 @@
                 </div>
                 <div class="form-group col-md-2">
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1" disabled="">
+                  <input type="checkbox" class="custom-control-input" onclick="clicou()" id="customCheck1" value="option1">
                   <label class="custom-control-label" for="customCheck1">Aprovado</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2" disabled="">
+                  <input type="checkbox" class="custom-control-input" onclick="clicou()" id="customCheck2"  value="option2">
                   <label class="custom-control-label" for="customCheck2">Reprovado</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3" disabled="">
+                  <input type="checkbox" class="custom-control-input" onclick="clicou()" id="customCheck3"  value="option2">
                   <label class="custom-control-label" for="customCheck3">Stand-Bie</label>
                 </div>
                 <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck4" disabled="">
+                  <input type="checkbox" class="custom-control-input" onclick="clicou()" id="customCheck4"  value="option2">
                   <label class="custom-control-label" for="customCheck4">Black-List</label>
                 </div>
                 </div>
@@ -89,3 +89,22 @@
       </div>
     </div>
   </div>
+
+  <script>
+		function clicou(){
+			//pega o radio button que será verificado
+			var x = document.getElementById('customCheck1').checked;
+			//pega a input text que será habilitado ou desabilitado
+			var t = document.getElementById('disabledInput');
+			//se o radio button estiver desmarcado o input text fica desabilitado
+			if(x == false){
+				t.setAttribute('disabled', '');
+				t.value = '';
+			//se o radio button esiver marcado o input text fica habilitado	
+			}else{
+				t.removeAttribute('disabled');
+			}
+			//imprime no console(tecla F12)
+			console.log(x,t);
+		}
+	</script>
