@@ -10,34 +10,37 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <h4>Visualizar</h4>
+                  <h4>Visualizar Funcionário</h4>
                   <br>
-                  <form action="<?=base_url('gerente/cadastrarcandidato');?>" method="post">
+                  <form>
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="inputtext4">Nome</label>
-                        <input type="text" class="form-control" id="inputEmail4" name="nome" placeholder="Nome">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control" id="nome" name="nome" disabled/>
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="inputtext4">Sobrenome</label>
-                        <input type="text" class="form-control" id="inputEmail4" name="sobrenome" placeholder="Sobrenome">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" class="form-control" id="sobrenome" name="sobrenome" disabled/>
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Email">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" disabled/>
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="inputNumero">Telefone</label>
-                        <input type="text" class="form-control" id="inputNumero" name="telefone" placeholder="(DDD) + Número">
+                        <label for="dt_nascimento">Nascimento</label>
+                        <input type="email" class="form-control" id="dt_nascimento" name="dt_nascimento" disabled/>
                       </div>
+                      <div class="form-group col-md-6">
+                        <label for="usuario">Usu&aacute;rio</label>
+                        <input type="email" class="form-control" id="usuario" name="usuario" disabled/>
+                      </div>					  
                       <div class="form-group col-md-6">
                         <label for="inputName">Cargo</label>
-						<select class="form-control" id="inputCargo" name="cargo">
-							<option value="1">consultor</option>
-						</select>
+                <select class="form-control" id="inputCargo" name="cargo" disabled/>
+                    <option value="1">consultor</option>
+                </select>
                       </div>
                     </div>
-					<button type="submit" class="btn btn-primary">Salvar</button>
                   </form>
                 </div>
               </div>

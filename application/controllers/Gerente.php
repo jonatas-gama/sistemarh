@@ -108,4 +108,19 @@ class Gerente extends CI_Controller {
 		$this->load->view('pages/gerente/visualiza_funcionarios', $dados);
 		$this->load->view('template/gerente/footer');
 	}
+
+	public function buscarProcessoAgendado($id){
+		$processo = $this->auxiliar_model->buscarProcessoAgendado($id)->result();
+		echo json_encode($processo);
+	}	
+	
+	public function buscarProcessoRealizado($id){
+		$realizado = $this->auxiliar_model->buscarProcessoRealizado($id)->result();
+		echo json_encode($realizado);
+	}
+	
+	public function buscarFuncionario($id){
+		$realizado = $this->auxiliar_model->buscarFuncionario($id)->result();
+		echo json_encode($realizado);
+	}
 }
