@@ -10,7 +10,7 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <h4>Visualizar Funcion·rio</h4>
+                  <h4>Visualizar Funcion√°rio</h4>
                   <br>
                   <form>
                     <div class="form-row">

@@ -13,7 +13,7 @@
           <div class="modal-body">
             <h4>Finalizar Processo:</h4>
             <br>
-            <form action="http://10.10.1.56/sistema/auxiliar/cadastrarcandidato" method="post">
+            <form action="<?=base_url('auxiliar/cadastrarcandidato');?>" method="post">
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="nome">Nome</label>
@@ -30,54 +30,43 @@
                     <div class="form-group col-md-6">
                         <label for="inputCurriculo">Canal de Seleção</label>
                         <select class="form-control" id="inputCurriculo" name="curriculo">
-                                <option value="1">Indeed</option>
-                                <option value="2">Facebook</option>
-                                <option value="3">Vagas.com</option>
-                                <option value="4">InfoJobs</option>                      
+							<?php foreach($curriculo as $cv){; ?> 
+									<option value="<?=$cv->id_curriculo;?>"><?=$cv->canal;?></option>
+							<?php }; ?>                      
                         </select>
                     </div>
                 <div class="form-group col-md-6">
                   <label for="inputNumero">Telefone</label>
-                  <input type="text" class="form-control" id="inputNumero" name="telefone" data-mask="(00) 00000-0000" placeholder="(DDD) Telefone">
+                  <input type="text" class="form-control" value="" id="inputNum" name="telefone" data-mask="(00) 00000-0000">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputName">Cargo</label>
                         <select class="form-control" id="inputCargo" name="cargo">
-                            <?php foreach($cargos as $cg){; ?> 
-								<option value="<?=$cg->id_cargo;?>"><?=$cg->cargo;?></option>
+							<?php foreach($cargos as $cg){; ?> 
+									<option value="<?=$cg->id_cargo;?>"><?=$cg->cargo;?></option>
 							<?php }; ?>                       
                         </select>
                 </div>
                 <div class="form-group col-md-2">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck1">
-                  <label class="custom-control-label" for="customCheck1">Aprovado</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck2">
-                  <label class="custom-control-label" for="customCheck2">Reprovado</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck3">
-                  <label class="custom-control-label" for="customCheck3">Stand-Bie</label>
-                </div>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="customCheck4">
-                  <label class="custom-control-label" for="customCheck4">Black-List</label>
-                </div>
+					<?php foreach($status as $st){; ?> 
+						<div class="custom-control custom-radio">
+							<input type="radio" name="status" class="custom-control-input" id="<?=$st->id_status;?>">	
+							<label class="custom-control-label" for="<?=$st->id_status;?>"><?=$st->status;?></label>						
+						</div>
+					<?php }; ?>	
                 </div>
                 <div class="form-group col-md-5">
                   <label for="inputName">Entrevistador</label>
-                  <input class="form-control" id="disabledInput" type="text" placeholder="Selecione..." disabled>
+                  <input class="form-control" id="disabledInput" type="text" value="<?=$this->session->userdata('funcionario')[0]->nome;?>" disabled>
                 </div>
                 <div class="form-group col-md-5">
-                  <label for="inputName">Motivo da Reprovação</label>
+                  <label for="inputName">Motivo da Reprovação/Blacklist</label>
                   <input class="form-control" id="disabledInput" type="text" placeholder="Selecione..." disabled>
                 </div>
                 <div class="form-group col-md-7">
                   <label for="example-datetime-local-input" class="col-4 col-form-label">Data</label>
                     <input class="form-control" type="text" name="data"
-                      id="example-datetime-local-input" data-mask="00/00/0000" placeholder="DD/MM/AAAA">
+                      id="inputData" data-mask="00/00/0000" placeholder="DD/MM/AAAA">
                 </div>
               </div>
               <div class="form-group">
