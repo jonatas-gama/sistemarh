@@ -31,10 +31,16 @@ class Gerente_model extends CI_Model{
 	}
 	
 	public function listarFuncionarios(){
-        $sql= "SELECT CONCAT(cd.nome,' ',cd.sobrenome) as nome, cd.telefone, cd.email, cg.cargo FROM tb_candidato cd JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo";
+        $sql= "SELECT CONCAT(fc.nome,' ',fc.sobrenome) as nome, fc.id, fc.email, fc.dt_nascimento, fc.usuario, cg.cargo FROM tb_funcionario fc JOIN tb_cargo cg ON fc.cargo_id = cg.id_cargo";
         $result = $this->db->query($sql);
 		return $result;
 	}
+	
+	public function buscarFuncionario($id){
+        $sql= "SELECT fc.nome, fc.sobrenome, fc.id, fc.email, fc.dt_nascimento, fc.usuario, cg.cargo FROM tb_funcionario fc JOIN tb_cargo cg ON fc.cargo_id = cg.id_cargo WHERE fc.id = ?";
+        $result = $this->db->query($sql, $id);
+		return $result;
+	}	
 
 	public function listarAgendados(){
         $sql= "SELECT cd.id_funcionario as id, cd.nome, cd.email, cv.canal, cd.telefone, cg.cargo, SUBSTR(cd.dt_processo, 1, 10) as data, SUBSTR(cd.dt_processo, 12, 6) as hora FROM tb_candidato cd INNER JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo INNER JOIN tb_curriculo cv ON cd.id_curriculo = cv.id_curriculo WHERE dt_processo > now()";
@@ -59,5 +65,4 @@ class Gerente_model extends CI_Model{
         $result = $this->db->query($sql, $id);
 		return $result;		
 	}
-	
 }

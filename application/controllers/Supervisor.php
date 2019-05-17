@@ -65,6 +65,10 @@ class Supervisor extends CI_Controller {
 	
 	public function processosAgendados()
 	{	
+		$dados['title'] = "Supervisor | Processos Agendados";
+		$dados['status'] = $this->supervisor_model->listarStatus()->result();
+		$dados['curriculo'] = $this->supervisor_model->listarCurriculo()->result();		
+		$dados['agendados'] = $this->supervisor_model->listarAgendados()->result();
 		$dados['cargos'] = $this->supervisor_model->listarCargos()->result();
 		$dados['title'] = "Supervisor | Processos Agendados";
 		$dados['agendados'] = $this->supervisor_model->listarAgendados()->result();
@@ -75,7 +79,11 @@ class Supervisor extends CI_Controller {
 	
 	public function processosRealizados()
 	{
-		$dados['cargos'] = $this->supervisor_model->listarCargos()->result();
+		
+		$dados['curriculo'] = $this->supervisor_model->listarCurriculo()->result();		
+		$dados['agendados'] = $this->supervisor_model->listarAgendados()->result();
+		$dados['cargos'] = $this->supervisor_model->listarCargos()->result();	
+		$dados['status'] = $this->supervisor_model->listarStatus()->result();	
 		$dados['title'] = "Supervisor | Processos Realizados";
 		$dados['realizados'] = $this->supervisor_model->listarRealizados()->result();
 		$this->load->view('template/supervisor/header', $dados);
@@ -110,17 +118,17 @@ class Supervisor extends CI_Controller {
 
 	
 	public function buscarProcessoAgendado($id){
-		$processo = $this->auxiliar_model->buscarProcessoAgendado($id)->result();
+		$processo = $this->supervisor_model->buscarProcessoAgendado($id)->result();
 		echo json_encode($processo);
 	}	
 	
 	public function buscarProcessoRealizado($id){
-		$realizado = $this->auxiliar_model->buscarProcessoRealizado($id)->result();
+		$realizado = $this->supervisor_model->buscarProcessoRealizado($id)->result();
 		echo json_encode($realizado);
 	}
 	
 	public function buscarFuncionario($id){
-		$realizado = $this->auxiliar_model->buscarFuncionario($id)->result();
+		$realizado = $this->supervisor_model->buscarFuncionario($id)->result();
 		echo json_encode($realizado);
 	}	
 }

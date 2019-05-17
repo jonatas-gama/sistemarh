@@ -52,7 +52,8 @@
   							<div class="form-group col-md-2">
   								<?php foreach($status as $st){; ?>
   								<div class="custom-control custom-radio">
-  									<input type="radio" name="status" class="custom-control-input" onclick="clicou()" id="<?=$st->id_status;?>">
+  									<input type="radio" name="status" class="custom-control-input" onclick="clicou()"
+  										id="<?=$st->id_status;?>">
   									<label class="custom-control-label" for="<?=$st->id_status;?>"><?=$st->status;?></label>
   								</div>
   								<?php };?>
@@ -64,7 +65,8 @@
   							</div>
   							<div class="form-group col-md-5">
   								<label for="inputName">Motivo da Reprovação/Blacklist</label>
-  								<input class="form-control" id="disabledInput" onclick="clicou()" type="text" placeholder="Selecione..." disabled>
+  								<input class="form-control" id="disabledInput" onclick="clicou()" type="text"
+  									placeholder="Selecione..." disabled>
   							</div>
   							<div class="form-group col-md-7">
   								<label for="example-datetime-local-input" class="col-4 col-form-label">Data</label>
@@ -83,4 +85,3 @@
   		</div>
   	</div>
   </div>
-
