@@ -18,17 +18,18 @@
   						<div class="form-row">
   							<div class="form-group col-md-6">
   								<label for="nome">Nome</label>
-  								<input type="text" class="form-control" value="" id="nome" name="nome" placeholder="Nome" disabled="">
+  								<input type="text" class="form-control" value="" id="nome" name="nome"
+  									placeholder="Nome" disabled="">
   							</div>
   							<div class="form-group col-md-6">
   								<label for="sobrenome">Sobrenome</label>
-  								<input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Sobrenome"
-  									disabled="">
+  								<input type="text" class="form-control" id="sobrenome" name="sobrenome"
+  									placeholder="Sobrenome" disabled="">
   							</div>
   							<div class="form-group col-md-6">
   								<label for="email">Email</label>
-  								<input type="email" class="form-control" value="" id="email" name="email" placeholder="Email"
-  									disabled="">
+  								<input type="email" class="form-control" value="" id="email" name="email"
+  									placeholder="Email" disabled="">
   							</div>
   							<div class="form-group col-md-6">
   								<label for="inputCurriculo">Canal de Seleção</label>
@@ -41,8 +42,8 @@
   							</div>
   							<div class="form-group col-md-6">
   								<label for="inputNumero">Telefone</label>
-  								<input type="text" class="form-control" id="inputNumero" name="telefone" placeholder="(DDD) + Número"
-  									disabled="">
+  								<input type="text" class="form-control" id="inputNumero" name="telefone"
+  									placeholder="(DDD) + Número" disabled="">
   							</div>
   							<div class="form-group col-md-6">
   								<label for="inputName">Cargo</label>
@@ -57,23 +58,27 @@
   							<div class="form-group col-md-2">
   								<?php foreach($status as $st){;?>
   								<div class="custom-control custom-radio">
-  									<input type="radio" name="status" class="custom-control-input" onclick="clicou()" id="<?=$st->id_status;?>" disabled>
-  									<label class="custom-control-label" for="<?=$st->id_status;?>"><?=$st->status;?></label>
+  									<input type="radio" name="status" class="custom-control-input" onclick="clicou()"
+  										id="<?=$st->id_status;?>" disabled>
+  									<label class="custom-control-label"
+  										for="<?=$st->id_status;?>"><?=$st->status;?></label>
   								</div>
-  								<?php }; ?>
+  								<?php };?>
   							</div>
   							<div class="form-group col-md-5">
   								<label for="inputName">Entrevistador</label>
-  								<input class="form-control" id="disabledInput1" type="text" placeholder="Selecione..." disabled>
+  								<input class="form-control" id="disabledInput1" type="text" placeholder="Selecione..."
+  									disabled>
   							</div>
   							<div class="form-group col-md-5">
   								<label for="inputName">Motivo da Reprovação</label>
-  								<input class="form-control" id="disabledInput" onclick="clicou()" type="text" placeholder="Selecione..." disabled>
+  								<input class="form-control" id="disabledInput" onclick="clicou()" type="text"
+  									placeholder="Selecione..." disabled>
   							</div>
   							<div class="form-group col-md-7">
   								<label for="example-datetime-local-input" class="col-4 col-form-label">Data</label>
-  								<input class="form-control" type="datetime-local" name="data" id="example-datetime-local-input"
-  									placeholder="--/--/----" disabled="">
+  								<input class="form-control" type="datetime-local" name="data"
+  									id="example-datetime-local-input" placeholder="--/--/----" disabled="">
   							</div>
   						</div>
   						<div class="form-group">
@@ -88,4 +93,3 @@
   		</div>
   	</div>
   </div>
-
