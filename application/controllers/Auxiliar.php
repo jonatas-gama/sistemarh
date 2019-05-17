@@ -77,6 +77,10 @@ class Auxiliar extends CI_Controller {
 	
 	public function processosRealizados()
 	{
+		$dados['curriculo'] = $this->auxiliar_model->listarCurriculo()->result();		
+		$dados['agendados'] = $this->auxiliar_model->listarAgendados()->result();
+		$dados['cargos'] = $this->auxiliar_model->listarCargos()->result();	
+		$dados['status'] = $this->auxiliar_model->listarStatus()->result();	
 		$dados['title'] = "Auxiliar | Processos Realizados";
 		$dados['realizados'] = $this->auxiliar_model->listarRealizados()->result();
 		$this->load->view('template/auxiliar/header', $dados);

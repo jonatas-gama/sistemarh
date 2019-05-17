@@ -41,13 +41,27 @@
 			
 		}		
 	</script>
-	
-	<!-- Bootstrap e JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="<?=base_url('vendor/dist/js/bootstrap.bundle.min.js');?>"></script>
-	<script src="<?=base_url('vendor/dist/js/main.js');?>"></script>
-	<script src="<?=base_url('vendor/dist/js/jquery.mask.js');?>"></script>
+		<!--input desabilitado-->
+		<script>
+  	function clicou() {
+  		//pega o radio button que será verificado
+  		var x = document.getElementById('2').checked;
+			var y = document.getElementById('3').checked;
+  		//pega a input text que será habilitado ou desabilitado
+  		var t = document.getElementById('disabledInput');
+  		//se o radio button estiver desmarcado o input text fica desabilitado
+  		if ((x || y) == false) {
+  			t.setAttribute('disabled', '');
+  			t.value = '';
+  			//se o radio button esiver marcado o input text fica habilitado	
+  		} else {
+  			t.removeAttribute('disabled');
+  		}
+  		//imprime no console(tecla F12)
+  		console.log(x, t);
+  	}
 
+  </script>
     <!-- Efeito do menu laretal -->
     <script>
       $("#menu-toggle").click(function (e) {
@@ -55,6 +69,12 @@
         $("#wrapper").toggleClass("toggled");
       });
     </script>
+
+<!-- Bootstrap e JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="<?=base_url('vendor/dist/js/bootstrap.bundle.min.js');?>"></script>
+	<script src="<?=base_url('vendor/dist/js/main.js');?>"></script>
+	<script src="<?=base_url('vendor/dist/js/jquery.mask.js');?>"></script>
 
 </body>
 
