@@ -39,4 +39,5 @@
 <?php
  require 'modal_cadastra_candidato.php';
  require 'modal_funcionarios.php';
+ require 'modal_adiciona_usuario.php';
 ?>	  

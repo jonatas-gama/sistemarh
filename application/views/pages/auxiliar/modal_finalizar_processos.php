@@ -48,7 +48,8 @@
   									<option value="<?=$cg->id_cargo;?>"><?=$cg->cargo;?></option>
   									<?php }; ?>
   								</select>
-  							</div>
+  							</div>]
+							  
   							<div class="form-group col-md-2">
   								<?php foreach($status as $st){; ?>
   								<div class="custom-control custom-radio">
