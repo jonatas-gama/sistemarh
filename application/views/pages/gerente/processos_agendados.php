@@ -42,5 +42,6 @@
 </div>
 <?php
 	require 'modal_cadastra_candidato.php';
-	require 'modal_finalizar_processos.php';
+  require 'modal_finalizar_processos.php';
+  require 'modal_adiciona_usuario.php';
 ?>
