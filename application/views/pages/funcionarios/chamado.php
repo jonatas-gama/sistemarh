@@ -25,6 +25,9 @@
 						</div>
 						<textarea class="form-control" aria-label="Com textarea"></textarea>
 					</div>
+					<div class="float-right mt-2">
+						<button type="submit" class="btn btn-success">Enviar</>
+					<div>
 				</div>
 			</div>
 		</div>
