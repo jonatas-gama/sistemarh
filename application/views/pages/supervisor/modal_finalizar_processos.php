@@ -49,6 +49,7 @@
   									<?php }; ?>
   								</select>
   							</div>
+							  
   							<div class="form-group col-md-2">
   								<?php foreach($status as $st){; ?>
   								<div class="custom-control custom-radio">
@@ -70,13 +71,12 @@
   							</div>
   							<div class="form-group col-md-7">
   								<label for="example-datetime-local-input" class="col-4 col-form-label">Data</label>
-  								<input class="form-control" type="text" name="data" id="inputData" data-mask="00/00/0000"
-  									placeholder="DD/MM/AAAA">
+  								<input class="form-control" type="datetime-local" name="data" id="inputData">
   							</div>
   						</div>
   						<div class="form-group">
   							<label for="exampleFormControlTextarea1">Observações:</label>
-  							<textarea class="form-control" id="exampleFormControlTextarea1" name="observacao" rows="3"></textarea>
+  							<textarea class="form-control" id="observacao" name="observacao" rows="3"></textarea>
   						</div>
   						<button type="submit" class="btn btn-primary">Finalizar</button>
   					</form>
