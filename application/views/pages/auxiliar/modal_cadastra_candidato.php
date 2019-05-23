@@ -52,7 +52,7 @@
                     <div class="form-group row">
                       <label for="example-datetime-local-input" class="col-4 col-form-label">Data e Hora</label>
                       <div class="col-12">
-                        <input class="form-control" type="text" name="data" data-mask="00/00/0000" placeholder="DD/MM/AAAA"
+                        <input class="form-control" type="datetime-local" name="data" 
                           id="example-datetime-local-input">
                       </div>
                     </div>
