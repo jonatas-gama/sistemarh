@@ -12,7 +12,7 @@
   					</button>
   				</div>
   				<div class="modal-body">
-  					<h4>Finalizar Processo:</h4>
+  					<h4>Processo Realizado:</h4>
   					<br>
   					<form action="http://10.10.1.56/sistema/auxiliar/cadastrarcandidato" method="post">
   						<div class="form-row">
@@ -42,7 +42,7 @@
   							</div>
   							<div class="form-group col-md-6">
   								<label for="inputNumero">Telefone</label>
-  								<input type="text" class="form-control" id="inputNumero" name="telefone"
+  								<input type="text" class="form-control" id="inputNum" name="telefone"
   									placeholder="(DDD) + Número" disabled="">
   							</div>
   							<div class="form-group col-md-6">
@@ -77,13 +77,13 @@
   							</div>
   							<div class="form-group col-md-7">
   								<label for="example-datetime-local-input" class="col-4 col-form-label">Data</label>
-  								<input class="form-control" type="datetime-local" name="data"
-  									id="example-datetime-local-input" placeholder="--/--/----" disabled="">
+  								<input class="form-control" type="text" name="data"
+  									id="inputData" disabled="">
   							</div>
   						</div>
   						<div class="form-group">
   							<label for="exampleFormControlTextarea1">Observações:</label>
-  							<textarea class="form-control" id="exampleFormControlTextarea1" name="observacao" rows="3"
+  							<textarea class="form-control" id="observacao" name="observacao" rows="3"
   								disabled=""></textarea>
   						</div>
   						<button type="submit" class="btn btn-primary">Finalizar</button>

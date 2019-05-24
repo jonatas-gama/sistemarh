@@ -13,7 +13,7 @@
               <div class="modal-body">
                 <h4>Cadastrar Candidatos:</h4>
                 <br>
-                <form action="<?=base_url('supervisor/cadastrarcandidato');?>" method="post">
+                <form action="<?=base_url('auxiliar/cadastrarcandidato');?>" method="post">
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputtext4">Nome</label>
@@ -52,7 +52,7 @@
                     <div class="form-group row">
                       <label for="example-datetime-local-input" class="col-4 col-form-label">Data e Hora</label>
                       <div class="col-12">
-                        <input class="form-control" type="text" name="data" data-mask="00/00/0000" placeholder="DD/MM/AAAA"
+                        <input class="form-control" type="datetime-local" name="data" 
                           id="example-datetime-local-input">
                       </div>
                     </div>

@@ -52,11 +52,11 @@ class Gerente extends CI_Controller {
 	public function cadastraFuncionario()
 	{
 		$dados['title'] = "Gerente | Visualizar Funcionários";
-		$dados['avaliacao'] = $this->auxiliar_model->listarAvaliacao()->result();
-		$dados['curriculo'] = $this->auxiliar_model->listarCurriculo()->result();
-		$dados['status'] = $this->auxiliar_model->listarStatus()->result();
-		$dados['cargos'] = $this->auxiliar_model->listarCargos()->result();		
-		$dados['funcionarios'] = $this->auxiliar_model->listarFuncionarios()->result();
+		$dados['avaliacao'] = $this->gerente_model->listarAvaliacao()->result();
+		$dados['curriculo'] = $this->gerente_model->listarCurriculo()->result();
+		$dados['status'] = $this->gerente_model->listarStatus()->result();
+		$dados['cargos'] = $this->gerente_model->listarCargos()->result();		
+		$dados['funcionarios'] = $this->gerente_model->listarFuncionarios()->result();
 		$this->load->view('template/gerente/header');
 		$this->load->view('pages/gerente/cadastra_funcionario', $dados);
 		$this->load->view('template/gerente/footer');
@@ -118,27 +118,27 @@ class Gerente extends CI_Controller {
 	public function teste()
 	{
 		$dados['title'] = "Gerente | Relatórios";
-		$dados['avaliacao'] = $this->auxiliar_model->listarAvaliacao()->result();
-		$dados['curriculo'] = $this->auxiliar_model->listarCurriculo()->result();
-		$dados['status'] = $this->auxiliar_model->listarStatus()->result();
-		$dados['cargos'] = $this->auxiliar_model->listarCargos()->result();
+		$dados['avaliacao'] = $this->gerente_model->listarAvaliacao()->result();
+		$dados['curriculo'] = $this->gerente_model->listarCurriculo()->result();
+		$dados['status'] = $this->gerente_model->listarStatus()->result();
+		$dados['cargos'] = $this->gerente_model->listarCargos()->result();
 		$this->load->view('pages/teste/header/header');
 		$this->load->view('pages/teste/body/bodyindex');
 		$this->load->view('pages/teste/footer/footer');
 	}
 
 	public function buscarProcessoAgendado($id){
-		$processo = $this->auxiliar_model->buscarProcessoAgendado($id)->result();
+		$processo = $this->gerente_model->buscarProcessoAgendado($id)->result();
 		echo json_encode($processo);
 	}	
 	
 	public function buscarProcessoRealizado($id){
-		$realizado = $this->auxiliar_model->buscarProcessoRealizado($id)->result();
+		$realizado = $this->gerente_model->buscarProcessoRealizado($id)->result();
 		echo json_encode($realizado);
 	}
 	
 	public function buscarFuncionario($id){
-		$realizado = $this->auxiliar_model->buscarFuncionario($id)->result();
+		$realizado = $this->gerente_model->buscarFuncionario($id)->result();
 		echo json_encode($realizado);
 	}
 }
