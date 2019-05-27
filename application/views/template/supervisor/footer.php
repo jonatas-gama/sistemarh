@@ -1,6 +1,6 @@
 <script type="text/javascript">
 		function buscaAgendado(id){
-			$.getJSON("<?=base_url('supervisor/buscarProcessoAgendado/');?>"+id, function(data){				
+			$.getJSON("<?=base_url('auxiliar/buscarProcessoAgendado/');?>"+id, function(data){				
 				document.getElementById('nome').value = data[0].nome;
 				document.getElementById('sobrenome').value = data[0].sobrenome;
 				document.getElementById('email').value = data[0].email;
@@ -9,6 +9,9 @@
 				document.getElementById('inputCargo').value = data[0].cargo;
 				document.getElementById('inputData').value = data[0].data;
 				document.getElementById('observacao').value = data[0].observacao;
+				document.getElementById('inputHora').value = data[0].hora;
+				document.getElementById('id_funcionario').value = data[0].id;
+				document.getElementById('motivo').value = data[0].motivo;
 				var x = document.getElementById(data[0].status).getAttribute('id');		
 				document.getElementById(data[0].status).checked = true;					
 				console.log(data, x);
@@ -16,7 +19,7 @@
 		}
 		
 		function buscaRealizado(id){
-			$.getJSON("<?=base_url('supervisor/buscarProcessoRealizado/');?>"+id, function(data){
+			$.getJSON("<?=base_url('auxiliar/buscarProcessoRealizado/');?>"+id, function(data){
 				document.getElementById('nome').value = data[0].nome;
 				document.getElementById('sobrenome').value = data[0].sobrenome;	
 				document.getElementById('email').value = data[0].email;
@@ -34,7 +37,7 @@
 		}		
 		
 		function buscarFuncionario(id){
-			$.getJSON("<?=base_url('supervisor/buscarFuncionario/');?>"+id, function(data){
+			$.getJSON("<?=base_url('auxiliar/buscarFuncionario/');?>"+id, function(data){
 				document.getElementById('nome').value = data[0].nome;
 				document.getElementById('sobrenome').value = data[0].sobrenome;
 				document.getElementById('email').value = data[0].email;
@@ -57,7 +60,7 @@
   		var x = document.getElementById('2').checked;
 		var y = document.getElementById('3').checked;
   		//pega a input text que será habilitado ou desabilitado
-  		var t = document.getElementById('disabledInput');
+  		var t = document.getElementById('motivo');
   		//se o radio button estiver desmarcado o input text fica desabilitado
   		if ((x || y) == false) {
   			t.setAttribute('disabled', '');

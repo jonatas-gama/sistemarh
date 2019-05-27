@@ -49,13 +49,22 @@
 								
 							</select>
                     </div>
-                    <div class="form-group row ml-1">
-                      <label for="example-datetime-local-input" class="col-4 col-form-label">Data e Hora</label>
-                      <div class="col-12">
-                        <input class="form-control" type="datetime-local" name="data" 
+                    <div class="form-group col-md-6">
+                      <label for="example-datetime-local-input" class="col-form-label">Data</label>
+                      <div>
+                        <input class="form-control" type="text" name="data" data-mask="00/00/0000" 
                           id="example-datetime-local-input">
                       </div>
                     </div>
+					
+                    <div class="form-group col-md-6">
+                      <label for="example-datetime-local-input" class="col-form-label">Hora</label>
+                      <div>
+                        <input class="form-control" type="text" name="hora" data-mask="00:00" 
+                          id="example-datetime-local-input">
+                      </div>
+                    </div>
+					
                   </div>
                   <div class="form-group">
                       <label for="exampleFormControlTextarea1">Observações:</label>
