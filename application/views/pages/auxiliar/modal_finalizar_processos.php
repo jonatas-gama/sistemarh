@@ -14,7 +14,7 @@
   				<div class="modal-body">
   					<h4>Finalizar Processo:</h4>
   					<br>
-  					<form action="<?=base_url('auxiliar/cadastrarcandidato');?>" method="post">
+  					<form action="<?=base_url('auxiliar/atualizarcandidato');?>" method="post">
   						<div class="form-row">
   							<div class="form-group col-md-6">
   								<label for="nome">Nome</label>
@@ -54,7 +54,7 @@
   								<?php foreach($status as $st){; ?>
   								<div class="custom-control custom-radio">
   									<input type="radio" name="status" class="custom-control-input" onclick="clicou()"
-  										id="<?=$st->id_status;?>">
+  										id="<?=$st->id_status;?>" value="<?=$st->id_status;?>">
   									<label class="custom-control-label" for="<?=$st->id_status;?>"><?=$st->status;?></label>
   								</div>
   								<?php };?>
@@ -66,18 +66,23 @@
   							</div>
   							<div class="form-group col-md-5">
   								<label for="inputName">Motivo da Reprovação/Blacklist</label>
-  								<input class="form-control" id="disabledInput" onclick="clicou()" type="text"
+  								<input class="form-control" id="motivo" name="motivo" onclick="clicou()" type="text"
   									placeholder="Selecione..." disabled>
   							</div>
-  							<div class="form-group col-md-7">
+  							<div class="form-group col-md-6">
   								<label for="example-datetime-local-input" class="col-4 col-form-label">Data</label>
-  								<input class="form-control" type="datetime-local" name="data" id="inputData">
+  								<input class="form-control" type="text" name="data" id="inputData" data-mask="00/00/0000">
   							</div>
+  							<div class="form-group col-md-6">
+  								<label for="example-datetime-local-input" class="col-4 col-form-label">Hora</label>
+  								<input class="form-control" type="text" name="hora" id="inputHora" data-mask="00:00">
+  							</div>							
   						</div>
   						<div class="form-group">
   							<label for="exampleFormControlTextarea1">Observações:</label>
   							<textarea class="form-control" id="observacao" name="observacao" rows="3"></textarea>
   						</div>
+						<input type="hidden" id="id_funcionario" name="id_funcionario">
   						<button type="submit" class="btn btn-primary">Finalizar</button>
   					</form>
   				</div>
