@@ -34,9 +34,9 @@
                   <label for="inputEmail4">Email</label>
                   <input type="Email" name="email" class="form-control" id="inputEmail" placeholder="Email do funcionário">
                 </div>
-                <div class="form-group row">
-                  <label for="example-date-input" class="col-6 col-form-label">Data de nascimento</label>
-                  <div class="col-11">
+                <div class="form-group row ml-1">
+                  <label for="example-date-input" class=" col-form-label">Data de nascimento</label>
+                  <div class="col-12">
                     <input class="form-control" name="dt_nascimento" data-mask="00/00/0000" type="text" placeholder="DD/MM/AAAA" id="example-date-input">
                   </div>
                 </div>

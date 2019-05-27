@@ -1,6 +1,6 @@
 <script type="text/javascript">
 		function buscaAgendado(id){
-			$.getJSON("<?=base_url('auxiliar/buscarProcessoAgendado/');?>"+id, function(data){				
+			$.getJSON("<?=base_url('supervisor/buscarProcessoAgendado/');?>"+id, function(data){				
 				document.getElementById('nome').value = data[0].nome;
 				document.getElementById('sobrenome').value = data[0].sobrenome;
 				document.getElementById('email').value = data[0].email;
@@ -16,7 +16,7 @@
 		}
 		
 		function buscaRealizado(id){
-			$.getJSON("<?=base_url('auxiliar/buscarProcessoRealizado/');?>"+id, function(data){
+			$.getJSON("<?=base_url('supervisor/buscarProcessoRealizado/');?>"+id, function(data){
 				document.getElementById('nome').value = data[0].nome;
 				document.getElementById('sobrenome').value = data[0].sobrenome;	
 				document.getElementById('email').value = data[0].email;
@@ -34,7 +34,7 @@
 		}		
 		
 		function buscarFuncionario(id){
-			$.getJSON("<?=base_url('auxiliar/buscarFuncionario/');?>"+id, function(data){
+			$.getJSON("<?=base_url('supervisor/buscarFuncionario/');?>"+id, function(data){
 				document.getElementById('nome').value = data[0].nome;
 				document.getElementById('sobrenome').value = data[0].sobrenome;
 				document.getElementById('email').value = data[0].email;
