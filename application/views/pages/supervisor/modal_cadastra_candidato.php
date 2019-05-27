@@ -49,7 +49,7 @@
 								
 							</select>
                     </div>
-                    <div class="form-group row">
+                    <div class="form-group row ml-1">
                       <label for="example-datetime-local-input" class="col-4 col-form-label">Data e Hora</label>
                       <div class="col-12">
                         <input class="form-control" type="datetime-local" name="data" 

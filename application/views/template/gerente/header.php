@@ -37,28 +37,30 @@
         <a href="#" data-toggle="modal" data-target="#adcionaUsuario"
           class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card"></i>Adicionar Usuário</a>
       </div>
+      
     </div>
 
     <!-- Menu Horizontal-->
     <div id="page-content-wrapper">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom col-12">
-        <button class="btn btn-light" id="menu-toggle"><img
-            src="https://img.icons8.com/metro/26/000000/menu.png"></button>
-        <nav class="navbar navbar-light bg-light col-9">
-          <form class="form-inline col-12">
-            <input class="form-control col-10 mr-sm-2 border-top-0 border-right-0 border-left-0" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
-          </form>
-        </nav>
-        <div class="col-2 collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">Olá <?=$this->session->userdata('funcionario')[0]->nome;?></a>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<?=base_url('login/logout');?>">Logout</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+ 			<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom col-12">
+ 				<button class="btn btn-light" id="menu-toggle"><img
+ 						src="https://img.icons8.com/metro/26/000000/menu.png"></button>
+ 				<nav class="navbar navbar-light bg-light col-9">
+ 					<form class="form-inline col-12">
+ 						<input class="form-control col-10 mr-sm-2 border-top-0 border-right-0 border-left-0" type="search"
+ 							placeholder="Pesquisar" aria-label="Pesquisar">
+ 						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+ 					</form>
+ 				</nav>
+ 				<div class="col-2 collapse navbar-collapse" id="navbarSupportedContent">
+ 					<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+ 						<li class="nav-item dropdown">
+ 							<a href="#" class="nav-link dropdown-toggle text-success" id="navbarDropdown" role="button" data-toggle="dropdown"
+ 								aria-haspopup="true" aria-expanded="false">Olá <?=$this->session->userdata('funcionario')[0]->nome;?></a>
+ 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+ 								<a class="dropdown-item" href="<?=base_url('funcionarios/logout');?>">Logout</a>
+ 							</div>
+ 						</li>
+ 					</ul>
+ 				</div>
+ 			</nav>
