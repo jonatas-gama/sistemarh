@@ -103,17 +103,30 @@ class Supervisor extends CI_Controller {
 			$this->session->set_flashdata('msg-erro', "Ocorreu alguma falha, registro n?o foi salvo.");
 		}
 		redirect(base_url('supervisor'));
-	}	
-	public function teste()
-	{
-		$dados['title'] = "Supervisor | Relatórios";
-		$dados['avaliacao'] = $this->supervisor_model->listarAvaliacao()->result();
-		$dados['curriculo'] = $this->supervisor_model->listarCurriculo()->result();
-		$dados['status'] = $this->supervisor_model->listarStatus()->result();
-		$dados['cargos'] = $this->supervisor_model->listarCargos()->result();
-		$this->load->view('pages/teste/header/header');
-		$this->load->view('pages/teste/body/bodyindex');
-		$this->load->view('pages/teste/footer/footer');
+	}
+
+	public function atualizarCandidato(){
+		$tb_candidato['nome'] = $this->input->post("nome");
+		$tb_candidato['sobrenome'] = $this->input->post("sobrenome");
+		$tb_candidato['email'] = $this->input->post("email");
+		$tb_candidato['telefone'] = $this->input->post("telefone");
+		$tb_candidato['id_curriculo'] = $this->input->post("curriculo");
+		$tb_candidato['cargo_id'] = $this->input->post("cargo");
+		$tb_candidato['dt_processo'] = $this->input->post("data");
+		$tb_candidato['hora'] = $this->input->post("hora");
+		$tb_candidato['observacao'] = $this->input->post("observacao");
+		$tb_candidato['id_status'] = $this->input->post("status");
+		$tb_candidato['motivo'] = $this->input->post("motivo");
+		$id_funcionario = $this->input->post("id_funcionario");
+		$this->db->where('id_funcionario', $id_funcionario);
+		if($this->db->update('tb_candidato', $tb_candidato)){
+			$this->session->set_flashdata('msg-sucesso', "Dados atualizados com sucesso.");
+		}else{
+			$this->session->set_flashdata('msg-erro', "Ocorreu alguma falha, registro n?o foi atualizado.");
+		}
+		//echo $this->db->last_query(); //Use para verificar a última consulta executada
+        //exit();
+		redirect(base_url('supervisor/processosagendados'));		
 	}
 
 	
