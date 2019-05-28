@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Gerente extends CI_Controller {
 	
     public function __construct(){
@@ -70,11 +69,7 @@ class Gerente extends CI_Controller {
 		$tb_funcionario['dt_nascimento'] = $this->input->post("dt_nascimento");
 		$tb_funcionario['cargo_id'] = $this->input->post("cargo");
 		$tb_funcionario['usuario'] = $this->input->post("usuario");
-<<<<<<< HEAD
 		$tb_funcionario['cargo_id'] = $this->input->post("cargo");
-=======
-		$tb_funcionario['senha'] = md5($this->input->post("senha"));
->>>>>>> Atualização 28/05/2019
 		if($this->db->insert('tb_funcionario', $tb_funcionario)){
 			$this->session->set_flashdata('msg-sucesso', "Dados salvos com sucesso.");
 		}else{
@@ -120,7 +115,6 @@ class Gerente extends CI_Controller {
 		$this->load->view('pages/gerente/visualiza_funcionarios', $dados);
 		$this->load->view('template/gerente/footer');
 	}
-
 	public function atualizarCandidato(){
 		$tb_candidato['nome'] = $this->input->post("nome");
 		$tb_candidato['sobrenome'] = $this->input->post("sobrenome");
