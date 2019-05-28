@@ -14,6 +14,14 @@
             <br>
             <form action="<?=base_url('supervisor/cadastrarusuario');?>" method="post">
               <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label for="inputtext4">Usuário</label>
+                  <input type="text" name="usuario" class="form-control" id="inputEmail4" placeholder="Usúario">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="inputtext4">Senha</label>
+                  <input type="password" name="senha" class="form-control" id="inputEmail4" placeholder="Senha">
+                </div>
                 <div class="form-group col-md-6">
                   <label for="inputtext4">Nome</label>
                   <input type="text" name="nome" class="form-control" id="inputEmail4" placeholder="Nome">

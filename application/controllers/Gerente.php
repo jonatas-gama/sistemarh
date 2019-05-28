@@ -1,6 +1,5 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 class Gerente extends CI_Controller {
 	
     public function __construct(){
@@ -116,7 +115,6 @@ class Gerente extends CI_Controller {
 		$this->load->view('pages/gerente/visualiza_funcionarios', $dados);
 		$this->load->view('template/gerente/footer');
 	}
-
 	public function atualizarCandidato(){
 		$tb_candidato['nome'] = $this->input->post("nome");
 		$tb_candidato['sobrenome'] = $this->input->post("sobrenome");

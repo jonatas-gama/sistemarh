@@ -58,6 +58,8 @@ class Supervisor extends CI_Controller {
 		$dados['status'] = $this->supervisor_model->listarStatus()->result();
 		$dados['cargos'] = $this->supervisor_model->listarCargos()->result();		
 		$dados['funcionarios'] = $this->supervisor_model->listarFuncionarios()->result();
+		$tb_funcionario['usuario'] = $this->input->post("usuario");
+		$tb_funcionario['senha'] = md5($this->input->post("senha"));
 		$this->load->view('template/supervisor/header', $dados);
 		$this->load->view('pages/supervisor/visualiza_funcionarios', $dados);
 		$this->load->view('template/supervisor/footer');
@@ -97,6 +99,8 @@ class Supervisor extends CI_Controller {
 		$tb_funcionario['email'] = $this->input->post("email");
 		$tb_funcionario['dt_nascimento'] = $this->input->post("dt_nascimento");
 		$tb_funcionario['cargo_id'] = $this->input->post("cargo");
+		$tb_funcionario['usuario'] = $this->input->post("usuario");
+		$tb_funcionario['senha'] = md5($this->input->post("senha"));
 		if($this->db->insert('tb_funcionario', $tb_funcionario)){
 			$this->session->set_flashdata('msg-sucesso', "Dados salvos com sucesso.");
 		}else{
