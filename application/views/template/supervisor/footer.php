@@ -9,6 +9,9 @@
 				document.getElementById('inputCargo').value = data[0].cargo;
 				document.getElementById('inputData').value = data[0].data;
 				document.getElementById('observacao').value = data[0].observacao;
+				document.getElementById('inputHora').value = data[0].hora;
+				document.getElementById('id_funcionario').value = data[0].id;
+				document.getElementById('motivo').value = data[0].motivo;
 				var x = document.getElementById(data[0].status).getAttribute('id');		
 				document.getElementById(data[0].status).checked = true;					
 				console.log(data, x);
@@ -57,7 +60,7 @@
   		var x = document.getElementById('2').checked;
 		var y = document.getElementById('3').checked;
   		//pega a input text que será habilitado ou desabilitado
-  		var t = document.getElementById('disabledInput');
+  		var t = document.getElementById('motivo');
   		//se o radio button estiver desmarcado o input text fica desabilitado
   		if ((x || y) == false) {
   			t.setAttribute('disabled', '');
