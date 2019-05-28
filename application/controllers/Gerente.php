@@ -70,7 +70,11 @@ class Gerente extends CI_Controller {
 		$tb_funcionario['dt_nascimento'] = $this->input->post("dt_nascimento");
 		$tb_funcionario['cargo_id'] = $this->input->post("cargo");
 		$tb_funcionario['usuario'] = $this->input->post("usuario");
+<<<<<<< HEAD
 		$tb_funcionario['cargo_id'] = $this->input->post("cargo");
+=======
+		$tb_funcionario['senha'] = md5($this->input->post("senha"));
+>>>>>>> Atualização 28/05/2019
 		if($this->db->insert('tb_funcionario', $tb_funcionario)){
 			$this->session->set_flashdata('msg-sucesso', "Dados salvos com sucesso.");
 		}else{
