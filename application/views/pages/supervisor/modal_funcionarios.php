@@ -36,9 +36,7 @@
                       </div>					  
                       <div class="form-group col-md-6">
                         <label for="inputName">Cargo</label>
-                <select class="form-control" id="inputCargo" name="cargo" disabled/>
-                    <option value="1">consultor</option>
-                </select>
+                       <input type="texte" id="cargo" class="form-control" disabled/>
                       </div>
                     </div>
                   </form>

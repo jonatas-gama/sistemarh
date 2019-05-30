@@ -33,12 +33,8 @@
   							</div>
   							<div class="form-group col-md-6">
   								<label for="inputCurriculo">Canal de Seleção</label>
-  								<select class="form-control" id="inputCurriculo" name="curriculo" disabled>
-  									<!--recebe a variável $curriculo do Controller e para cada resultado cria um option-->
-  									<?php foreach($curriculo as $cv){; ?>
-  									<option value="<?=$cv->id_curriculo;?>"><?=$cv->canal;?></option>
-  									<?php }; ?>
-  								</select>
+  								<input type="text" class="form-control" id="curriculo" name="curriculo"
+  									disabled="">
   							</div>
   							<div class="form-group col-md-6">
   								<label for="inputNumero">Telefone</label>
@@ -47,12 +43,8 @@
   							</div>
   							<div class="form-group col-md-6">
   								<label for="inputName">Cargo</label>
-  								<select class="form-control" id="inputCargo" name="cargo" disabled>
-  									<!--recebe a variável $cargos do Controller e para cada resultado cria um option-->
-  									<?php foreach($cargos as $cg){; ?>
-  									<option value="<?=$cg->id_cargo;?>"><?=$cg->cargo;?></option>
-  									<?php }; ?>
-  								</select>
+								  <input type="text" class="form-control" id="cargo" name="cargo"
+  									disabled="">
 
   							</div>
   							<div class="form-group col-md-2">

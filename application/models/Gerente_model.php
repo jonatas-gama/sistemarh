@@ -43,22 +43,22 @@ class Gerente_model extends CI_Model{
 	}	
 
 	public function listarAgendados(){
-        $sql= "SELECT cd.id_funcionario as id, cd.nome, cd.email, cv.canal, cd.telefone, cg.cargo, SUBSTR(cd.dt_processo, 1, 10) as data, SUBSTR(cd.dt_processo, 12, 6) as hora FROM tb_candidato cd INNER JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo INNER JOIN tb_curriculo cv ON cd.id_curriculo = cv.id_curriculo WHERE dt_processo > now()";
+        $sql= "SELECT cd.id_funcionario as id, cd.nome, cd.email, cv.canal, cd.telefone, cg.cargo, cd.dt_processo as data, hora FROM tb_candidato cd INNER JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo INNER JOIN tb_curriculo cv ON cd.id_curriculo = cv.id_curriculo WHERE DATEDIFF(str_to_date(dt_processo, '%d/%m/%Y'), date_format(now(), '%Y-%m-%d')) >= 1 ORDER BY str_to_date(dt_processo, '%d/%m/%Y') ASC";
         $result = $this->db->query($sql);
-		return $result;
-	}	
+        return $result;
+    }              
 
-	public function listarRealizados(){
-        $sql= "SELECT cd.id_funcionario as id, cd.nome, cd.telefone, cg.cargo, SUBSTR(cd.dt_processo, 1, 10) as data, st.status, cd.observacao FROM tb_candidato cd INNER JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo INNER JOIN tb_status st ON cd.id_status = st.id_status WHERE dt_processo < now()";
+    public function listarRealizados(){
+        $sql= "SELECT cd.id_funcionario as id, cd.nome, cd.telefone, cg.cargo, cd.dt_processo as data, st.status, cd.observacao FROM tb_candidato cd INNER JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo INNER JOIN tb_status st ON cd.id_status = st.id_status WHERE DATEDIFF(str_to_date(dt_processo, '%d/%m/%Y'), date_format(now(), '%Y-%m-%d')) < 1 ORDER BY str_to_date(dt_processo, '%d/%m/%Y') ASC";
         $result = $this->db->query($sql);
-		return $result;
-	}
-	
+        return $result;
+    }
+
 	public function buscarProcessoAgendado($id){
-        $sql= "SELECT cd.id_funcionario as id, cd.nome, cd.id_status as status, cd.sobrenome, cd.email, cd.observacao, cv.canal, cd.telefone, cg.cargo, SUBSTR(cd.dt_processo, 1, 10) as data, SUBSTR(cd.dt_processo, 12, 6) as hora FROM tb_candidato cd INNER JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo INNER JOIN tb_curriculo cv ON cd.id_curriculo = cv.id_curriculo WHERE dt_processo > now() AND cd.id_funcionario = ?";
+        $sql= "SELECT cd.id_funcionario as id, motivo, cd.nome, cd.id_status as status, cd.sobrenome, cd.email, cd.observacao, cv.canal, cd.telefone, cg.cargo, cd.dt_processo as data, hora FROM tb_candidato cd INNER JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo INNER JOIN tb_curriculo cv ON cd.id_curriculo = cv.id_curriculo WHERE DATEDIFF(str_to_date(dt_processo, '%d/%m/%Y'), date_format(now(), '%Y-%m-%d')) >= 1 AND cd.id_funcionario = ?";
         $result = $this->db->query($sql, $id);
-		return $result;
-	}
+         return $result;
+    }
 	
 	public function buscarProcessoRealizado($id){
         $sql= "SELECT cd.id_funcionario as id, cd.nome, cd.sobrenome, cd.id_status as status, cd.email, cd.telefone, cg.cargo, SUBSTR(cd.dt_processo, 1, 10) as data, st.status as st, cd.observacao FROM tb_candidato cd INNER JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo INNER JOIN tb_status st ON cd.id_status = st.id_status WHERE dt_processo < now() AND cd.id_funcionario = ?";

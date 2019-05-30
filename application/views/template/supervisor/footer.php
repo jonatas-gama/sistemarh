@@ -1,6 +1,6 @@
 <script type="text/javascript">
 		function buscaAgendado(id){
-			$.getJSON("<?=base_url('auxiliar/buscarProcessoAgendado/');?>"+id, function(data){				
+			$.getJSON("<?=base_url('supervisor/buscarProcessoAgendado/');?>"+id, function(data){				
 				document.getElementById('nome').value = data[0].nome;
 				document.getElementById('sobrenome').value = data[0].sobrenome;
 				document.getElementById('email').value = data[0].email;
@@ -19,13 +19,14 @@
 		}
 		
 		function buscaRealizado(id){
-			$.getJSON("<?=base_url('auxiliar/buscarProcessoRealizado/');?>"+id, function(data){
+			$.getJSON("<?=base_url('supervisor/buscarProcessoRealizado/');?>"+id, function(data){
 				document.getElementById('nome').value = data[0].nome;
 				document.getElementById('sobrenome').value = data[0].sobrenome;	
 				document.getElementById('email').value = data[0].email;
 				//document.getElementById('canal').value = data[0].canal;
 				document.getElementById('inputNum').value = data[0].telefone;
-				document.getElementById('inputCargo').value = data[0].cargo;
+				document.getElementById('cargo').value = data[0].cargo;
+				document.getElementById('curriculo').value = data[0].curriculo;
 				document.getElementById('inputData').value = data[0].data;		
 				document.getElementById('observacao').value = data[0].observacao;
 				var x = document.getElementById(data[0].status).getAttribute('id');		
@@ -74,8 +75,9 @@
   	}
 
 	</script>
+
     <!-- Efeito do menu laretal -->
-	<script>
+		<script>
       $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
@@ -84,8 +86,8 @@
 
 
 <!-- Bootstrap e JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="<?=base_url('vendor/dist/js/bootstrap.bundle.min.js');?>"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="<?=base_url('vendor/dist/js/bootstrap.bundle.min.js');?>"></script>
 	<script src="<?=base_url('vendor/dist/js/main.js');?>"></script>
 	<script src="<?=base_url('vendor/dist/js/jquery.mask.js');?>"></script>
 

@@ -13,7 +13,7 @@
               <div class="modal-body">
                 <h4>Cadastrar Candidatos:</h4>
                 <br>
-                <form action="<?=base_url('auxiliar/cadastrarcandidato');?>" method="post">
+                <form action="<?=base_url('gerente/cadastrarcandidato');?>" method="post">
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputtext4">Nome</label>
