@@ -44,6 +44,7 @@
 				document.getElementById('email').value = data[0].email;
 				document.getElementById('dt_nascimento').value = data[0].dt_nascimento;
 				document.getElementById('usuario').value = data[0].usuario;
+				document.getElementById('cargo').value = data[0].cargo;
 				console.log(data);
 			});
 			

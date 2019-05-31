@@ -28,7 +28,13 @@ class Supervisor_model extends CI_Model{
         $sql= "SELECT * FROM tb_cargo";
         $result = $this->db->query($sql);
 		return $result;
-	}	
+    }	
+
+    public function buscarFuncionario($id){
+        $sql= "SELECT fc.nome, fc.sobrenome, fc.id, fc.email, fc.dt_nascimento, fc.usuario, cg.cargo FROM tb_funcionario fc JOIN tb_cargo cg ON fc.cargo_id = cg.id_cargo WHERE fc.id = ?";
+        $result = $this->db->query($sql, $id);
+		return $result;
+	}
 
 	public function listarFuncionarios(){
         $sql= "SELECT CONCAT(fc.nome,' ',fc.sobrenome) as nome, fc.id, fc.email, fc.dt_nascimento, fc.usuario, cg.cargo FROM tb_funcionario fc JOIN tb_cargo cg ON fc.cargo_id = cg.id_cargo";
