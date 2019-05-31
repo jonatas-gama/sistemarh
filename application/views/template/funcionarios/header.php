@@ -80,7 +80,7 @@
  							<a href="#" class="nav-link dropdown-toggle text-success" id="navbarDropdown" role="button" data-toggle="dropdown"
  								aria-haspopup="true" aria-expanded="false">Olá <?=$this->session->userdata('funcionario')[0]->nome;?></a>
  							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
- 								<a class="dropdown-item" href="<?=base_url('funcionarios/logout');?>">Logout</a>
+ 								<a class="dropdown-item" href="<?=base_url('login/logout');?>">Logout</a>
  							</div>
  						</li>
  					</ul>

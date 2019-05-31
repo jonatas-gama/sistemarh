@@ -70,11 +70,11 @@
   									placeholder="Selecione..." disabled>
   							</div>
   							<div class="form-group col-md-6">
-  								<label for="example-datetime-local-input" class="col-4 col-form-label">Data</label>
+  								<label for="inputData" class="col-4 col-form-label">Data</label>
   								<input class="form-control" type="text" name="data" id="inputData" data-mask="00/00/0000">
   							</div>
   							<div class="form-group col-md-6">
-  								<label for="example-datetime-local-input" class="col-4 col-form-label">Hora</label>
+  								<label for="inputHora" class="col-4 col-form-label">Hora</label>
   								<input class="form-control" type="text" name="hora" id="inputHora" data-mask="00:00">
   							</div>							
   						</div>
