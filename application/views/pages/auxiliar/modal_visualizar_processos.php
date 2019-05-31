@@ -14,7 +14,7 @@
   				<div class="modal-body">
   					<h4>Processo Realizado:</h4>
   					<br>
-  					<form action="http://10.10.1.56/sistema/auxiliar/cadastrarcandidato" method="post">
+  					<form action="<?=base_url("auxiliar/cadastrarcandidato");?>" method="post">
   						<div class="form-row">
   							<div class="form-group col-md-6">
   								<label for="nome">Nome</label>

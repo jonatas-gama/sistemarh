@@ -4,7 +4,7 @@
             <div class="modal-dialog modal-lg">
               <div class="modal-content">
                 <div class="modal-header">
-                  <img src="http://10.10.1.56/sistema/vendor/dist/img/rs.png" style="width: 15rem" class="rounded" alt="imagem-responsiva">
+                  <img src="<?=base_url("vendor/dist/img/rs.png");?>" style="width: 15rem" class="rounded" alt="imagem-responsiva">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
