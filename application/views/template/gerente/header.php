@@ -58,9 +58,15 @@
  							<a href="#" class="nav-link dropdown-toggle text-success" id="navbarDropdown" role="button" data-toggle="dropdown"
  								aria-haspopup="true" aria-expanded="false">Olá <?=$this->session->userdata('funcionario')[0]->nome;?></a>
  							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
- 								<a class="dropdown-item" href="<?=base_url('funcionarios/logout');?>">Logout</a>
+ 								<a class="dropdown-item" href="<?=base_url('login/logout');?>">Logout</a>
  							</div>
  						</li>
  					</ul>
  				</div>
- 			</nav>
+       </nav>
+       
+       <!--Jquery-->
+       <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+
+</body>

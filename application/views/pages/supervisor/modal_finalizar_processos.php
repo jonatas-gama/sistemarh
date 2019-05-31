@@ -14,7 +14,7 @@
   				<div class="modal-body">
   					<h4>Finalizar Processo:</h4>
   					<br>
-  					<form action="<?=base_url('auxiliar/atualizarcandidato');?>" method="post">
+  					<form action="<?=base_url('supervisor/atualizarcandidato');?>" method="post">
   						<div class="form-row">
   							<div class="form-group col-md-6">
   								<label for="nome">Nome</label>
@@ -33,7 +33,7 @@
   								<select class="form-control" id="inputCurriculo" name="curriculo">
   									<?php foreach($curriculo as $cv){; ?>
   									<option value="<?=$cv->id_curriculo;?>"><?=$cv->canal;?></option>
-  									<?php }; ?>
+  									<?php };?>
   								</select>
   							</div>
   							<div class="form-group col-md-6">
@@ -62,7 +62,7 @@
   							<div class="form-group col-md-5">
   								<label for="inputName">Entrevistador</label>
   								<input class="form-control" id="disabledInpu1" type="text"
-  									value="<?=$this->session->userdata('funcionario')[0]->nome;?>" disabled>
+  									value="<?=$this->session->userdata('funcionario')[0]->nome;?>" disabled></input>
   							</div>
   							<div class="form-group col-md-5">
   								<label for="inputName">Motivo da Reprovação/Blacklist</label>

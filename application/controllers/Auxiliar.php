@@ -47,6 +47,8 @@ class Auxiliar extends CI_Controller {
 		}else{
 			$this->session->set_flashdata('msg-erro', "Ocorreu alguma falha, registro n?o foi salvo.");
 		}
+		//echo $this->db->last_query(); //Use para verificar a última consulta executada
+        //exit();		
 		redirect(base_url('/auxiliar'));
 	}
 	
@@ -101,7 +103,8 @@ class Auxiliar extends CI_Controller {
 		$tb_candidato['observacao'] = $this->input->post("observacao");
 		$tb_candidato['id_status'] = $this->input->post("status");
 		$tb_candidato['motivo'] = $this->input->post("motivo");
-		$id_funcionario = $this->input->post("id_funcionario");
+		$tb_candidato['entrevistador'] = $this->input->post("entrevistador");
+		$id_funcionario = $this->input->post("id_funcionario");		
 		$this->db->where('id_funcionario', $id_funcionario);
 		if($this->db->update('tb_candidato', $tb_candidato)){
 			$this->session->set_flashdata('msg-sucesso', "Dados atualizados com sucesso.");
@@ -109,7 +112,7 @@ class Auxiliar extends CI_Controller {
 			$this->session->set_flashdata('msg-erro', "Ocorreu alguma falha, registro n?o foi atualizado.");
 		}
 		//echo $this->db->last_query(); //Use para verificar a última consulta executada
-        //exit();
+       // exit();
 		redirect(base_url('auxiliar/processosagendados'));		
 	}
 	

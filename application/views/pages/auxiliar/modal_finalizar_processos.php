@@ -61,8 +61,8 @@
   							</div>
   							<div class="form-group col-md-5">
   								<label for="inputName">Entrevistador</label>
-  								<input class="form-control" id="disabledInpu1" type="text"
-  									value="<?=$this->session->userdata('funcionario')[0]->nome;?>" disabled>
+  								<input class="form-control" id="entrevistador" type="text" name="entrevistador" value="teste"
+  									 disabled>
   							</div>
   							<div class="form-group col-md-5">
   								<label for="inputName">Motivo da Reprovação/Blacklist</label>

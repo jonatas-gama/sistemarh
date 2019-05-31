@@ -14,7 +14,7 @@
   				<div class="modal-body">
   					<h4>Finalizar Processo:</h4>
   					<br>
-  					<form action="<?=base_url('auxiliar/atualizarcandidato');?>" method="post">
+  					<form action="<?=base_url('gerente/atualizarcandidato');?>" method="post">
   						<div class="form-row">
   							<div class="form-group col-md-6">
   								<label for="nome">Nome</label>

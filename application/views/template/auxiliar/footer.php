@@ -12,9 +12,11 @@
 				document.getElementById('inputHora').value = data[0].hora;
 				document.getElementById('id_funcionario').value = data[0].id;
 				document.getElementById('motivo').value = data[0].motivo;
+				data[0].entrevistador = "<?=$this->session->userdata('funcionario')[0]->nome;?>";
+			  document.getElementById('entrevistador').value = data[0].entrevistador;
 				var x = document.getElementById(data[0].status).getAttribute('id');		
 				document.getElementById(data[0].status).checked = true;					
-				console.log(data, x);
+				console.log(data);
 			});
 		}
 		
@@ -25,7 +27,8 @@
 				document.getElementById('email').value = data[0].email;
 				//document.getElementById('canal').value = data[0].canal;
 				document.getElementById('inputNum').value = data[0].telefone;
-				document.getElementById('inputCargo').value = data[0].cargo;
+				document.getElementById('cargo').value = data[0].cargo;
+				document.getElementById('curriculo').value = data[0].curriculo;
 				document.getElementById('inputData').value = data[0].data;		
 				document.getElementById('observacao').value = data[0].observacao;
 				var x = document.getElementById(data[0].status).getAttribute('id');		
@@ -43,6 +46,7 @@
 				document.getElementById('email').value = data[0].email;
 				document.getElementById('dt_nascimento').value = data[0].dt_nascimento;
 				document.getElementById('usuario').value = data[0].usuario;
+				document.getElementById('cargo').value = data[0].cargo;
 				console.log(data);
 			});
 			
@@ -84,8 +88,8 @@
 
 
 <!-- Bootstrap e JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="<?=base_url('vendor/dist/js/bootstrap.bundle.min.js');?>"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="<?=base_url('vendor/dist/js/bootstrap.bundle.min.js');?>"></script>
 	<script src="<?=base_url('vendor/dist/js/main.js');?>"></script>
 	<script src="<?=base_url('vendor/dist/js/jquery.mask.js');?>"></script>
 

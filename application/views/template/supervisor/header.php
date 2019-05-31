@@ -28,14 +28,14 @@
       <div style="width: 200px; height:70px;" class="sidebar-heading"><img src="<?=base_url('vendor/dist/img/rs.png');?>" class="rounded" style="width: 10rem;" alt="imagem-responsiva">
       </div>
       <div class="list-group list-group-flush">
-        <a href="<?=base_url('supervisor');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line"></i>Relatórios</a>
+        <a href="<?=base_url('supervisor');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line"></i> Relatórios</a>
         <a href="<?=base_url('supervisor/processosagendados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt"></i>Processos Agendados</a>
-        <a href="<?=base_url('supervisor/processosrealizados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check"></i>Processos Realizados</a>
-        <a href="<?=base_url('supervisor/visualizafuncionarios');?>" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users"></i>Funcionários</a>
+        <a href="<?=base_url('supervisor/processosrealizados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check"></i> Processos Realizados</a>
+        <a href="<?=base_url('supervisor/visualizafuncionarios');?>" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users"></i> Funcionários</a>
         <a href="#" data-toggle="modal" data-target="#largeShoes1"
           class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus"></i>Cadastrar Candidato</a>
-        <a href="#" data-toggle="modal" data-target="#adcionaUsuario"
-          class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card"></i>Adicionar Usuário</a>
+        <!--<a href="#" data-toggle="modal" data-target="#largeShoes3"
+          class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>-->
       </div>
     </div>
 
@@ -62,3 +62,14 @@
           </ul>
         </div>
       </nav>
+
+      <script>
+      $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+    <!-- Bootstrap e JavaScript -->
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    </body>
