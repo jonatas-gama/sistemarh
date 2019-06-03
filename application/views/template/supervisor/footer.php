@@ -1,9 +1,9 @@
 <script type="text/javascript">
 		function buscaAgendado(id){
 			$.getJSON("<?=base_url('supervisor/buscarProcessoAgendado/');?>"+id, function(data){				
-				document.getElementById('nome').value = data[0].nome;
-				document.getElementById('sobrenome').value = data[0].sobrenome;
-				document.getElementById('email').value = data[0].email;
+				document.getElementById('inputNome').value = data[0].nome;
+				document.getElementById('inputSobre').value = data[0].sobrenome;
+				document.getElementById('inputEmail1').value = data[0].email;
 				//document.getElementById('canal').value = data[0].canal;
 				document.getElementById('inputNum').value = data[0].telefone;
 				document.getElementById('inputCargo').value = data[0].cargo;
@@ -20,9 +20,9 @@
 		
 		function buscaRealizado(id){
 			$.getJSON("<?=base_url('supervisor/buscarProcessoRealizado/');?>"+id, function(data){
-				document.getElementById('nome').value = data[0].nome;
-				document.getElementById('sobrenome').value = data[0].sobrenome;	
-				document.getElementById('email').value = data[0].email;
+				document.getElementById('inputNome').value = data[0].nome;
+				document.getElementById('inputSobre').value = data[0].sobrenome;	
+				document.getElementById('inputEmail1').value = data[0].email;
 				//document.getElementById('canal').value = data[0].canal;
 				document.getElementById('inputNum').value = data[0].telefone;
 				document.getElementById('cargo').value = data[0].cargo;
@@ -39,9 +39,9 @@
 		
 		function buscarFuncionario(id){
 			$.getJSON("<?=base_url('supervisor/buscarFuncionario/');?>"+id, function(data){
-				document.getElementById('nome').value = data[0].nome;
-				document.getElementById('sobrenome').value = data[0].sobrenome;
-				document.getElementById('email').value = data[0].email;
+				document.getElementById('inputNome').value = data[0].nome;
+				document.getElementById('inputSobre').value = data[0].sobrenome;
+				document.getElementById('inputEmail1').value = data[0].email;
 				document.getElementById('dt_nascimento').value = data[0].dt_nascimento;
 				document.getElementById('usuario').value = data[0].usuario;
 				document.getElementById('cargo').value = data[0].cargo;

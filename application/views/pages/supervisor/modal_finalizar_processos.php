@@ -18,15 +18,15 @@
   						<div class="form-row">
   							<div class="form-group col-md-6">
   								<label for="nome">Nome</label>
-  								<input type="text" class="form-control" value="" id="nome" name="nome" placeholder="Nome">
+  								<input type="text" class="form-control" value="" id="inputNome" name="nome" placeholder="Nome">
   							</div>
   							<div class="form-group col-md-6">
   								<label for="sobrenome">Sobrenome</label>
-  								<input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
+  								<input type="text" class="form-control" id="inputSobre" name="sobrenome" placeholder="Sobrenome">
   							</div>
   							<div class="form-group col-md-6">
   								<label for="email">Email</label>
-  								<input type="email" class="form-control" value="" id="email" name="email" placeholder="Email">
+  								<input type="email" class="form-control" value="" id="inputEmail1" name="email" placeholder="Email">
   							</div>
   							<div class="form-group col-md-6">
   								<label for="inputCurriculo">Canal de Seleção</label>

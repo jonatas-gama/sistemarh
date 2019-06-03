@@ -53,7 +53,7 @@
                       <label for="example-datetime-local-input" class="col-form-label">Data</label>
                       <div>
                         <input class="form-control" type="text" name="data" data-mask="00/00/0000" 
-                          id="example-datetime-local-input">
+                          id="example-datetime-local-input" placeholder="DD/MM/AAAA">
                       </div>
                     </div>
 					
@@ -61,14 +61,14 @@
                       <label for="example-datetime-local-input" class="col-form-label">Hora</label>
                       <div>
                         <input class="form-control" type="text" name="hora" data-mask="00:00" 
-                          id="example-datetime-local-input">
+                          id="example-datetime-local-input" placeholder="HH:MM">
                       </div>
                     </div>
 					
                   </div>
                   <div class="form-group">
                       <label for="exampleFormControlTextarea1">Observações:</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" name="observacao" rows="3"></textarea>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name="observacao" rows="3" placeholder="Digite..."></textarea>
                     </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Adicionar currículo</label>

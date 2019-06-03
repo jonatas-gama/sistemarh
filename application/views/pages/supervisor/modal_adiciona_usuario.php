@@ -16,19 +16,19 @@
               <div class="form-row">
               <div class="form-group col-md-6">
                   <label for="inputtext4">Usuário</label>
-                  <input type="text" name="usuario" class="form-control" id="inputEmail4" placeholder="Usúario">
+                  <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Usúario">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputtext4">Senha</label>
-                  <input type="password" name="senha" class="form-control" id="inputEmail4" placeholder="Senha">
+                  <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputtext4">Nome</label>
-                  <input type="text" name="nome" class="form-control" id="inputEmail4" placeholder="Nome">
+                  <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputtext4">Sobrenome</label>
-                  <input type="text" name="sobrenome" class="form-control" id="inputEmail4" placeholder="Sobrenome">
+                  <input type="text" name="sobrenome" class="form-control" id="sobrenome" placeholder="Sobrenome">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputName">Cargo exercido pelo funcionário</label>

@@ -13,19 +13,19 @@
               <div class="modal-body">
                 <h4>Cadastrar Candidatos:</h4>
                 <br>
-                <form action="<?=base_url('supervisor/cadastrarcandidato');?>" method="post">
+                <form action="<?=base_url('gerente/cadastrarcandidato');?>" method="post">
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <label for="inputtext4">Nome</label>
-                      <input type="text" class="form-control" id="inputEmail4" name="nome" placeholder="Nome">
+                      <label for="nome">Nome</label>
+                      <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="inputtext4">Sobrenome</label>
-                      <input type="text" class="form-control" id="inputEmail4" name="sobrenome" placeholder="Sobrenome">
+                      <label for="sobrenome">Sobrenome</label>
+                      <input type="text" class="form-control" id="sobrenome" name="sobrenome" placeholder="Sobrenome">
                     </div>
                     <div class="form-group col-md-6">
-                      <label for="inputEmail4">Email</label>
-                      <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Email">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                     </div>
 						<div class="form-group col-md-6">
 							<label for="inputCurriculo">Canal de Seleção</label>
@@ -53,7 +53,7 @@
                       <label for="example-datetime-local-input" class="col-form-label">Data</label>
                       <div>
                         <input class="form-control" type="text" name="data" data-mask="00/00/0000" 
-                          id="example-datetime-local-input">
+                          id="example-datetime-local-input" placeholder="DD/MM/AAAA">
                       </div>
                     </div>
 					
@@ -61,14 +61,14 @@
                       <label for="example-datetime-local-input" class="col-form-label">Hora</label>
                       <div>
                         <input class="form-control" type="text" name="hora" data-mask="00:00" 
-                          id="example-datetime-local-input">
+                          id="example-datetime-local-input" placeholder="HH:MM">
                       </div>
                     </div>
 					
                   </div>
                   <div class="form-group">
                       <label for="exampleFormControlTextarea1">Observações:</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" name="observacao" rows="3"></textarea>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" name="observacao" rows="3" placeholder="Digite..."></textarea>
                     </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Adicionar currículo</label>
