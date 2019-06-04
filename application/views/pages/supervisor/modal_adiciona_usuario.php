@@ -33,9 +33,9 @@
                 <div class="form-group col-md-6">
                   <label for="inputName">Cargo exercido pelo funcionário</label>
                   <select name="cargo" id="input" class="form-control">
-                    <?php foreach($cargos as $cg){; ?> 
-						<option value="<?=$cg->id_cargo;?>"><?=$cg->cargo;?></option>
-					<?php }; ?>
+						          <option >Selecione...</option>
+                      <option value="2">Supervisor</option>
+                      <option value="4">Auxiliar</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">
