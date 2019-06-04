@@ -25,6 +25,8 @@
 				document.getElementById('sobrenome').value = data[0].sobrenome;	
 				document.getElementById('email').value = data[0].email;
 				//document.getElementById('canal').value = data[0].canal;
+				document.getElementById('cargo').value = data[0].cargo;
+				document.getElementById('curriculo').value = data[0].curriculo;
 				document.getElementById('inputNum').value = data[0].telefone;
 				document.getElementById('inputCargo').value = data[0].cargo;
 				document.getElementById('inputData').value = data[0].data;		

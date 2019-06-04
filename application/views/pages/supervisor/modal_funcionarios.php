@@ -16,15 +16,15 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" disabled/>
+                        <input type="text" class="form-control" id="inputNome" name="nome" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="sobrenome">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobrenome" name="sobrenome" disabled/>
+                        <input type="text" class="form-control" id="inputSobre" name="sobrenome" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" disabled/>
+                        <input type="email" class="form-control" id="inputEmail1" name="email" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="dt_nascimento">Nascimento</label>
