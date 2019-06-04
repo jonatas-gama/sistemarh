@@ -34,8 +34,7 @@
         <a href="<?=base_url('supervisor/visualizafuncionarios');?>" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users"></i> Funcionários</a>
         <a href="#" data-toggle="modal" data-target="#largeShoes1"
           class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus"></i>Cadastrar Candidato</a>
-        <!--<a href="#" data-toggle="modal" data-target="#largeShoes3"
-          class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>-->
+        <a href="#" data-toggle="modal" data-target="#adcionaUsuario" class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>
       </div>
     </div>
 
