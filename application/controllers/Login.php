@@ -49,7 +49,7 @@ class Login extends CI_Controller{
 			$dadosSessao['logado'] = TRUE;
 			$dadosSessao['msg'] = "";
 			$this->session->set_userdata($dadosSessao);
-			$data['title'] = "Área do Colaborador";
+			$data['title'] = "&Aacute;rea do Colaborador";
 			$this->load->view('template/funcionarios/header', $data);
 			$this->load->view('pages/funcionarios/index');
 			$this->load->view('template/funcionarios/footer');			

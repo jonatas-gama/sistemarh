@@ -7,7 +7,7 @@
  	<meta name="description" content="">
  	<meta name="author" content="">
 
- 	<title>Funcionário</title>
+ 	<title><?=$title;?></title>
  	<!-- Bootstrap com CSS -->
  	<link rel="stylesheet" href="<?=base_url("vendor/dist/css/bootstrap.css");?>">
  	<a href="https://icons8.com/icon/3095/hamburger-menu"></a>
