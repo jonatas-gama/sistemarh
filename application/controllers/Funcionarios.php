@@ -5,7 +5,7 @@ class Funcionarios extends CI_Controller {
 	
     public function __construct(){
         parent::__construct();
-		//$this->load->modele/funcionarios_model');
+		$this->load->model('funcionario_model');
     }	
 	
 	public function index() 
@@ -13,6 +13,8 @@ class Funcionarios extends CI_Controller {
 		$this->load->view('template/funcionarios/header');
 		$this->load->view('pages/funcionarios/index');
 		$this->load->view('template/funcionarios/footer');
+		//echo $this->db->last_query(); //Use para verificar a última consulta executada
+        //exit();
     }
     public function vagasAbertas ()
     {
@@ -57,4 +59,9 @@ class Funcionarios extends CI_Controller {
         $this->session->set_userdata($dadosSessao);
         redirect(base_url("login/logout"));
     }
+	
+	public function buscarFuncionario($id){
+		$funcionario = $this->funcionario_model->buscarFuncionario($id)->result();
+		echo json_encode($funcionario);
+	}
 }

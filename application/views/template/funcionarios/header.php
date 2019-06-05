@@ -17,7 +17,7 @@
  		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
  </head>
 
- <body>
+ <body onload="buscarFuncionario(<?=$this->session->userdata('funcionario')[0]->id;?>)">
 
  	<div class="d-flex" id="wrapper">
 
@@ -78,7 +78,7 @@
  					<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
  						<li class="nav-item dropdown">
  							<a href="#" class="nav-link dropdown-toggle text-success" id="navbarDropdown" role="button" data-toggle="dropdown"
- 								aria-haspopup="true" aria-expanded="false">Olá</a>
+ 								aria-haspopup="true" aria-expanded="false">Olá <span id="saudacao"><span></a>
  							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
  								<a class="dropdown-item" href="<?=base_url('login/logout');?>">Logout</a>
  							</div>

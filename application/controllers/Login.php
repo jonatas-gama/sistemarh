@@ -12,7 +12,7 @@ class Login extends CI_Controller{
 		$gerente  		= $this->padrao_model->selectGerente($login,$senha);
 		$supervisor		= $this->padrao_model->selectSupervisor($login,$senha);
 		$auxiliar  		= $this->padrao_model->selectAuxiliar($login,$senha);
-		$funcionario  		= $this->padrao_model->selectFuncionario($login,$senha);
+		$funcionario  	= $this->padrao_model->selectFuncionario($login,$senha);
 		
 		if($gerente){
 			$dadosSessao['funcionario'] = $gerente;

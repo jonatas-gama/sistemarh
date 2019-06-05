@@ -15,7 +15,7 @@
 				data[0].entrevistador = "<?=$this->session->userdata('funcionario')[0]->nome;?>";
 			  document.getElementById('entrevistador').value = data[0].entrevistador;
 				var x = document.getElementById(data[0].status).getAttribute('id');		
-				document.getElementById(data[0].status).checked = true;					
+				document.getElementById(data[0].status).checked = true;	
 				console.log(data);
 			});
 		}
