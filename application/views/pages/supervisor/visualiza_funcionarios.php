@@ -20,7 +20,7 @@
           <tr>
             <td><?=$funcionario->nome;?></td>
             <td><?=$funcionario->email;?></td>
-			<td><?=$funcionario->usuario;?></td>
+			      <td><?=$funcionario->usuario;?></td>
             <td><?=$funcionario->cargo;?></td>
             <td align="center">
               <button type=" button" class="btn btn-success btn-sm" onclick="buscarFuncionario('<?=$funcionario->id;?>')" data-toggle="modal"
