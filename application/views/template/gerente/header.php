@@ -56,7 +56,7 @@
  					<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
  						<li class="nav-item dropdown">
  							<a href="#" class="nav-link dropdown-toggle text-success" id="navbarDropdown" role="button" data-toggle="dropdown"
- 								aria-haspopup="true" aria-expanded="false">Olá</a>
+ 								aria-haspopup="true" aria-expanded="false">Olá <?=$this->session->userdata('funcionario')[0]->nome;?></a>
  							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
  								<a class="dropdown-item" href="<?=base_url('login/logout');?>">Logout</a>
  							</div>

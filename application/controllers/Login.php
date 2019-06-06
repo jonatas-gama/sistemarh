@@ -4,17 +4,23 @@ class Login extends CI_Controller{
     public function __construct(){                
         parent::__construct();      
         $this->load->model('padrao_model');
+		$this->load->model('gerente_model');
+		$this->load->model('supervisor_model');
     }
 	
 	public function login(){
 		$login = $this->input->post('login');
 		$senha = MD5($this->input->post('senha'));
-		$gerente  		= $this->padrao_model->selectGerente($login,$senha);
-		$supervisor		= $this->padrao_model->selectSupervisor($login,$senha);
-		$auxiliar  		= $this->padrao_model->selectAuxiliar($login,$senha);
-		$funcionario  	= $this->padrao_model->selectFuncionario($login,$senha);
+		$gerente  		= $this->padrao_model->selectGerente($login,$senha)->result();
+		$supervisor		= $this->padrao_model->selectSupervisor($login,$senha)->result();
+		$auxiliar  		= $this->padrao_model->selectAuxiliar($login,$senha)->result();
+		$funcionario  	= $this->padrao_model->selectFuncionario($login,$senha)->result();
 		
 		if($gerente){
+			$data['avaliacao'] = $this->gerente_model->listarAvaliacao()->result();
+			$data['curriculo'] = $this->gerente_model->listarCurriculo()->result();
+			$data['status'] = $this->gerente_model->listarStatus()->result();
+			$data['cargos'] = $this->gerente_model->listarCargos()->result();
 			$dadosSessao['funcionario'] = $gerente;
 			$dadosSessao['logado'] = TRUE;
 			$dadosSessao['msg'] = "";
@@ -25,6 +31,10 @@ class Login extends CI_Controller{
 			$this->load->view('template/gerente/footer');		
 			
 		}elseif($supervisor){
+			$data['avaliacao'] = $this->gerente_model->listarAvaliacao()->result();
+			$data['curriculo'] = $this->gerente_model->listarCurriculo()->result();
+			$data['status'] = $this->gerente_model->listarStatus()->result();
+			$data['cargos'] = $this->gerente_model->listarCargos()->result();
 			$dadosSessao['funcionario'] = $supervisor;
 			$dadosSessao['logado'] = TRUE;
 			$dadosSessao['msg'] = "";
@@ -35,6 +45,10 @@ class Login extends CI_Controller{
 			$this->load->view('template/supervisor/footer');	
 			
 		}elseif($auxiliar){
+			$data['avaliacao'] = $this->gerente_model->listarAvaliacao()->result();
+			$data['curriculo'] = $this->gerente_model->listarCurriculo()->result();
+			$data['status'] = $this->gerente_model->listarStatus()->result();
+			$data['cargos'] = $this->gerente_model->listarCargos()->result();			
 			$dadosSessao['funcionario'] = $auxiliar;
 			$dadosSessao['logado'] = TRUE;
 			$dadosSessao['msg'] = "";

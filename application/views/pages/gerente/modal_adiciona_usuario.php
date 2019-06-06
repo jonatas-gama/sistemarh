@@ -15,23 +15,23 @@
             <form action="<?=base_url('gerente/cadastrarusuario');?>" method="post">
               <div class="form-row">
               <div class="form-group col-md-6">
-                  <label for="inputtext4">Usuário</label>
-                  <input type="text" name="usuario" class="form-control" id="inputEmail4" placeholder="Usúario">
+                  <label for="usuario">Usuário</label>
+                  <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Usúario">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputtext4">Senha</label>
-                  <input type="password" name="senha" class="form-control" id="inputEmail4" placeholder="Senha">
+                  <label for="senha">Senha</label>
+                  <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputtext4">Nome</label>
-                  <input type="text" name="nome" class="form-control" id="inputEmail4" placeholder="Nome">
+                  <label for="nome">Nome</label>
+                  <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputtext4">Sobrenome</label>
-                  <input type="text" name="sobrenome" class="form-control" id="inputEmail4" placeholder="Sobrenome">
+                  <label for="sobrenome">Sobrenome</label>
+                  <input type="text" name="sobrenome" class="form-control" id="sobrenome" placeholder="Sobrenome">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputName">Cargo exercido pelo funcionário</label>
+                  <label for="inputCargo">Cargo exercido pelo funcionário</label>
            			<select class="form-control" id="inputCargo" name="cargo">
 						<?php foreach($cargos as $cg){; ?> 
 							<option value="<?=$cg->id_cargo;?>"><?=$cg->cargo;?></option>
@@ -39,8 +39,8 @@
 					</select>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputEmail4">Email</label>
-                  <input type="Email" name="email" class="form-control" id="inputEmail" placeholder="Email do funcionário">
+                  <label for="email">Email</label>
+                  <input type="Email" name="email" class="form-control" id="email" placeholder="Email do funcionário">
                 </div>
                 <div class="form-group row ml-1">
                   <label for="example-date-input" class=" col-form-label">Data de nascimento</label>

@@ -12,7 +12,7 @@
 				document.getElementById('inputHora').value = data[0].hora;
 				document.getElementById('id_funcionario').value = data[0].id;
 				document.getElementById('motivo').value = data[0].motivo;
-				document.getElementById('entrevistador').value = data[0].hora;
+				document.getElementById('entrevistador').value = data[0].entrevistador;
 				var x = document.getElementById(data[0].status).getAttribute('id');		
 				document.getElementById(data[0].status).checked = true;					
 				console.log(data, x);
