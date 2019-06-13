@@ -103,7 +103,7 @@ class Auxiliar extends CI_Controller {
 		$tb_candidato['observacao'] = $this->input->post("observacao");
 		$tb_candidato['id_status'] = $this->input->post("status");
 		$tb_candidato['motivo'] = $this->input->post("motivo");
-		$tb_candidato['entrevistador'] = $this->input->post("entrevistador");
+		$tb_candidato['entrevistador'] = $this->session->userdata('nome');
 		$id_funcionario = $this->input->post("id_funcionario");		
 		$this->db->where('id_funcionario', $id_funcionario);
 		if($this->db->update('tb_candidato', $tb_candidato)){
@@ -112,7 +112,7 @@ class Auxiliar extends CI_Controller {
 			$this->session->set_flashdata('msg-erro', "Ocorreu alguma falha, registro n?o foi atualizado.");
 		}
 		//echo $this->db->last_query(); //Use para verificar a última consulta executada
-       // exit();
+        //exit();
 		redirect(base_url('auxiliar/processosagendados'));		
 	}
 	
@@ -129,5 +129,45 @@ class Auxiliar extends CI_Controller {
 	public function buscarFuncionario($id){
 		$realizado = $this->auxiliar_model->buscarFuncionario($id)->result();
 		echo json_encode($realizado);
+	}
+
+	public function extrairRealizados(){
+			$productResult = $this->auxiliar_model->listarRealizados()->result_array();
+			if (isset($_POST["export"])) {
+				$filename = "Processos_realizados.xls";
+				header("Content-Type: application/vnd.ms-excel");
+				header("Content-Disposition: attachment; filename=\"$filename\"");
+				$isPrintHeader = false;
+				if (! empty($productResult)) {
+					foreach ($productResult as $row) {
+						if (! $isPrintHeader) {
+							echo implode("\t", array_keys($row)) . "\n";
+							$isPrintHeader = true;
+						}
+						echo implode("\t", array_values($row)) . "\n";
+					}
+				}
+				exit();
+		}
+	}
+	
+	public function extrairAgendados(){
+			$productResult = $this->auxiliar_model->listarAgendados()->result_array();
+			if (isset($_POST["export"])) {
+				$filename = "Processos_realizados.xls";
+				header("Content-Type: application/vnd.ms-excel");
+				header("Content-Disposition: attachment; filename=\"$filename\"");
+				$isPrintHeader = false;
+				if (! empty($productResult)) {
+					foreach ($productResult as $row) {
+						if (! $isPrintHeader) {
+							echo implode("\t", array_keys($row)) . "\n";
+							$isPrintHeader = true;
+						}
+						echo implode("\t", array_values($row)) . "\n";
+					}
+				}
+				exit();
+		}
 	}	
 }

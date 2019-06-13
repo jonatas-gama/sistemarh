@@ -63,7 +63,7 @@ class Auxiliar_model extends CI_Model{
 
 	
 	public function buscarProcessoRealizado($id){
-        $sql= "SELECT cd.motivo, cd.id_funcionario as id, cd.nome, cd.sobrenome, cd.id_status as status, cd.email, cd.telefone, cg.cargo, SUBSTR(cd.dt_processo, 1, 10) as data, st.status as st, cd.observacao, cv.canal as curriculo FROM tb_candidato cd INNER JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo INNER JOIN tb_status st ON cd.id_status = st.id_status INNER JOIN tb_curriculo cv ON cv.id_curriculo = cd.id_curriculo WHERE dt_processo < now() AND cd.id_funcionario = ?";
+        $sql= "SELECT cd.motivo, cd.id_funcionario as id, cd.entrevistador, cd.nome, cd.sobrenome, cd.id_status as status, cd.email, cd.telefone, cg.cargo, SUBSTR(cd.dt_processo, 1, 10) as data, st.status as st, cd.observacao, cv.canal as curriculo FROM tb_candidato cd INNER JOIN tb_cargo cg ON cd.cargo_id = cg.id_cargo INNER JOIN tb_status st ON cd.id_status = st.id_status INNER JOIN tb_curriculo cv ON cv.id_curriculo = cd.id_curriculo WHERE dt_processo < now() AND cd.id_funcionario = ?";
         $result = $this->db->query($sql, $id);
 		return $result;		
 	}

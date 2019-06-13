@@ -59,7 +59,7 @@
   							</div>
   							<div class="form-group col-md-5">
   								<label for="inputName">Entrevistador</label>
-  								<input class="form-control" id="disabledInput1" type="text" placeholder="Selecione..."
+  								<input class="form-control" id="entrevistador" type="text" placeholder="Selecione..."
   									disabled>
   							</div>
   							<div class="form-group col-md-5">

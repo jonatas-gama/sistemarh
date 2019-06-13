@@ -36,6 +36,7 @@
 						          <option >Selecione...</option>
                       <option value="2">Supervisor</option>
                       <option value="4">Auxiliar</option>
+					  <option value="1">Consultor</option>
                   </select>
                 </div>
                 <div class="form-group col-md-6">

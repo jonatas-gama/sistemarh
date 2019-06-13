@@ -61,7 +61,7 @@
   							</div>
   							<div class="form-group col-md-5">
   								<label for="inputName">Entrevistador</label>
-  								<input class="form-control" id="entrevistador" type="text" name="entrevistador" value="teste"
+  								<input class="form-control" id="entrevistador" type="text" name="entrevistador" value="<?=$this->session->userdata('nome');?>"
   									 disabled>
   							</div>
   							<div class="form-group col-md-5">

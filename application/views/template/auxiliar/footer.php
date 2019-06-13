@@ -12,8 +12,6 @@
 				document.getElementById('inputHora').value = data[0].hora;
 				document.getElementById('id_funcionario').value = data[0].id;
 				document.getElementById('motivo').value = data[0].motivo;
-				data[0].entrevistador = "<?=$this->session->userdata('funcionario')[0]->nome;?>";
-			  document.getElementById('entrevistador').value = data[0].entrevistador;
 				var x = document.getElementById(data[0].status).getAttribute('id');		
 				document.getElementById(data[0].status).checked = true;	
 				console.log(data);
@@ -31,6 +29,7 @@
 				document.getElementById('curriculo').value = data[0].curriculo;
 				document.getElementById('inputData').value = data[0].data;		
 				document.getElementById('observacao').value = data[0].observacao;
+				document.getElementById('entrevistador').value = data[0].entrevistador;
 				var x = document.getElementById(data[0].status).getAttribute('id');		
 				document.getElementById(data[0].status).checked = true;
 				console.log(data);

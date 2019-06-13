@@ -17,42 +17,42 @@ class Login extends CI_Controller{
 		$funcionario  	= $this->padrao_model->selectFuncionario($login,$senha)->result();
 		
 		if($gerente){
+			foreach($gerente as $g)
+			$this->session->set_userdata('nome', $g->nome);
+			$this->session->set_userdata('id', $g->id_usuario);
+			$this->session->set_userdata('usuario', $g->usuario);
 			$data['avaliacao'] = $this->gerente_model->listarAvaliacao()->result();
 			$data['curriculo'] = $this->gerente_model->listarCurriculo()->result();
 			$data['status'] = $this->gerente_model->listarStatus()->result();
 			$data['cargos'] = $this->gerente_model->listarCargos()->result();
-			$dadosSessao['funcionario'] = $gerente;
-			$dadosSessao['logado'] = TRUE;
-			$dadosSessao['msg'] = "";
-			$this->session->set_userdata($dadosSessao);
 			$data['title'] = "Gerente";
 			$this->load->view('template/gerente/header', $data);
 			$this->load->view('pages/gerente/relatorios');
 			$this->load->view('template/gerente/footer');		
 			
 		}elseif($supervisor){
+			foreach($supervisor as $s)
+			$this->session->set_userdata('nome', $s->nome);
+			$this->session->set_userdata('id', $s->id_usuario);
+			$this->session->set_userdata('usuario', $s->usuario);			
 			$data['avaliacao'] = $this->gerente_model->listarAvaliacao()->result();
 			$data['curriculo'] = $this->gerente_model->listarCurriculo()->result();
 			$data['status'] = $this->gerente_model->listarStatus()->result();
 			$data['cargos'] = $this->gerente_model->listarCargos()->result();
-			$dadosSessao['funcionario'] = $supervisor;
-			$dadosSessao['logado'] = TRUE;
-			$dadosSessao['msg'] = "";
-			$this->session->set_userdata($dadosSessao);
 			$data['title'] = "Supervisor";
 			$this->load->view('template/supervisor/header', $data);
 			$this->load->view('pages/supervisor/relatorios');
 			$this->load->view('template/supervisor/footer');	
 			
 		}elseif($auxiliar){
+			foreach($auxiliar as $a)
+			$this->session->set_userdata('nome', $a->nome);
+			$this->session->set_userdata('id', $a->id_usuario);
+			$this->session->set_userdata('usuario', $a->usuario);						
 			$data['avaliacao'] = $this->gerente_model->listarAvaliacao()->result();
 			$data['curriculo'] = $this->gerente_model->listarCurriculo()->result();
 			$data['status'] = $this->gerente_model->listarStatus()->result();
 			$data['cargos'] = $this->gerente_model->listarCargos()->result();			
-			$dadosSessao['funcionario'] = $auxiliar;
-			$dadosSessao['logado'] = TRUE;
-			$dadosSessao['msg'] = "";
-			$this->session->set_userdata($dadosSessao);
 			$data['title'] = "Auxiliar";
 			$this->load->view('template/auxiliar/header', $data);
 			$this->load->view('pages/auxiliar/relatorios');
@@ -77,11 +77,9 @@ class Login extends CI_Controller{
 		}	
 	}
 
-    public function logout(){
-        $dadosSessao['cliente'] = NULL;
-        $dadosSessao['logado'] = FALSE;
-        $this->session->set_userdata($dadosSessao);
-        redirect(base_url("/"));
-    }    
+	public function logout(){
+		$this->session->sess_destroy();
+		redirect('/');
+	}    
 }
 

@@ -12,7 +12,6 @@
 				document.getElementById('inputHora').value = data[0].hora;
 				document.getElementById('id_funcionario').value = data[0].id;
 				document.getElementById('motivo').value = data[0].motivo;
-				document.getElementById('entrevistador').value = data[0].entrevistador;
 				var x = document.getElementById(data[0].status).getAttribute('id');		
 				document.getElementById(data[0].status).checked = true;					
 				console.log(data, x);
@@ -34,9 +33,7 @@
 				var x = document.getElementById(data[0].status).getAttribute('id');		
 				document.getElementById(data[0].status).checked = true;
 				console.log(data);
-			});
-			
-			
+			});			
 		}		
 		
 		function buscarFuncionario(id){
@@ -47,9 +44,7 @@
 				document.getElementById('dt_nascimento').value = data[0].dt_nascimento;
 				document.getElementById('usuario').value = data[0].usuario;
 				console.log(data);
-			});
-			
-			
+			});			
 		}		
 
 	</script>

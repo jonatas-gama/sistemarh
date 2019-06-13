@@ -13,7 +13,7 @@ class Padrao_model extends CI_Model{
         $gerente = $this->db->get()->result();
 		return $gerente;	
 		*/
-		$sql = "SELECT nome from tb_gerente where usuario = ? AND senha = ?";
+		$sql = "SELECT * from tb_gerente where usuario = ? AND senha = ?";
 		$gerente = $this->db->query($sql, array($usuario, $senha));
 		return $gerente;	
     }
@@ -25,7 +25,7 @@ class Padrao_model extends CI_Model{
         $supervisor = $this->db->get()->result();
 		return $supervisor;
 		*/
-		$sql = "SELECT nome from tb_supervisor where usuario = ? AND senha = ?";
+		$sql = "SELECT * from tb_supervisor where usuario = ? AND senha = ?";
 		$supervisor = $this->db->query($sql, array($usuario, $senha));
 		return $supervisor;		
 	}	
@@ -37,7 +37,7 @@ class Padrao_model extends CI_Model{
         $auxiliar = $this->db->get()->result();
 		return $auxiliar;
 		*/
-		$sql = "SELECT nome from tb_auxiliar where usuario = ? AND senha = ?";
+		$sql = "SELECT * from tb_auxiliar where usuario = ? AND senha = ?";
 		$auxiliar = $this->db->query($sql, array($usuario, $senha));
 		return $auxiliar;		
 	}

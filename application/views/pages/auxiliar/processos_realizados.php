@@ -34,6 +34,9 @@
 				</tbody>
 				<?php }; ?>
 			</table>
+			<form method="post">
+			<button type="submit" class="btn btn-success" name="export" formaction="<?=base_url('auxiliar/extrairRealizados');?>">Download</button>	
+			</form>
 			<!--tabela-->
 		</div>
 	</div>
