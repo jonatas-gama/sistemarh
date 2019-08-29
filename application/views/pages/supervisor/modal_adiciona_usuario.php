@@ -16,23 +16,23 @@
               <div class="form-row">
               <div class="form-group col-md-6">
                   <label for="inputtext4">Usuário</label>
-                  <input type="text" name="usuario" class="form-control" id="usuario" placeholder="Usúario">
+                  <input type="text" name="usuario" class="form-control" id="add_usuario" placeholder="Usúario">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputtext4">Senha</label>
-                  <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha">
+                  <input type="password" name="senha" class="form-control" id="add_senha" placeholder="Senha">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputtext4">Nome</label>
-                  <input type="text" name="nome" class="form-control" id="nome" placeholder="Nome">
+                  <input type="text" name="nome" class="form-control" id="add_nome" placeholder="Nome">
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputtext4">Sobrenome</label>
-                  <input type="text" name="sobrenome" class="form-control" id="sobrenome" placeholder="Sobrenome">
+                  <input type="text" name="sobrenome" class="form-control" id="add_sobrenome" placeholder="Sobrenome">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputName">Cargo exercido pelo funcionário</label>
-                  <select name="cargo" id="input" class="form-control">
+                  <label for="add_cargo">Cargo exercido pelo funcionário</label>
+                  <select name="cargo" id="add_cargo" class="form-control">
 						          <option >Selecione...</option>
                       <option value="2">Supervisor</option>
                       <option value="4">Auxiliar</option>
@@ -41,12 +41,12 @@
                 </div>
                 <div class="form-group col-md-6">
                   <label for="inputEmail4">Email</label>
-                  <input type="Email" name="email" class="form-control" id="inputEmail" placeholder="Email do funcionário">
+                  <input type="Email" name="email" class="form-control" id="add_email" placeholder="Email do funcionário">
                 </div>
                 <div class="form-group row">
                   <label for="example-date-input" class="col-6 col-form-label">Data de nascimento</label>
                   <div class="col-11">
-                    <input class="form-control" name="dt_nascimento" data-mask="00/00/0000" type="text" placeholder="DD/MM/AAAA" id="example-date-input">
+                    <input class="form-control" name="dt_nascimento" data-mask="00/00/0000" type="text" placeholder="DD/MM/AAAA" id="add_data">
                   </div>
                 </div>
               </div>

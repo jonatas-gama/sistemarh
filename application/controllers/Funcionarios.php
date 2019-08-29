@@ -6,6 +6,7 @@ class Funcionarios extends CI_Controller {
     public function __construct(){
         parent::__construct();
 		$this->load->model('funcionario_model');
+		verificaSessao($this->session->userdata('nome'));
     }	
 	
 	public function index() 

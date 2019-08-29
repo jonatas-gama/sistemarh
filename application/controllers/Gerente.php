@@ -5,6 +5,7 @@ class Gerente extends CI_Controller {
     public function __construct(){
         parent::__construct();
 		$this->load->model('gerente_model');
+		verificaSessao($this->session->userdata('nome'));
     }	
 	
 	public function index() 
@@ -40,6 +41,7 @@ class Gerente extends CI_Controller {
 		$tb_candidato['cargo_id'] = $this->input->post("cargo");
 		$tb_candidato['dt_processo'] = $this->input->post("data");
 		$tb_candidato['observacao'] = $this->input->post("observacao");
+		$tb_candidato['hora'] = $this->input->post("hora");			
 		if($this->db->insert('tb_candidato', $tb_candidato)){
 			$this->session->set_flashdata('msg-sucesso', "Dados salvos com sucesso.");
 		}else{

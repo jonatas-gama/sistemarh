@@ -6,6 +6,7 @@ class Auxiliar extends CI_Controller {
     public function __construct(){
         parent::__construct();
 		$this->load->model('auxiliar_model');
+		verificaSessao($this->session->userdata('nome'));
     }	
 
 	public function index()
@@ -106,6 +107,18 @@ class Auxiliar extends CI_Controller {
 		$tb_candidato['entrevistador'] = $this->session->userdata('nome');
 		$id_funcionario = $this->input->post("id_funcionario");		
 		$this->db->where('id_funcionario', $id_funcionario);
+		if($this->input->post("status") == 1){
+			$tb_funcionario['nome'] = $this->input->post("nome");
+			$tb_funcionario['sobrenome'] = $this->input->post("sobrenome");
+			$tb_funcionario['email'] = $this->input->post("email");
+			$tb_funcionario['dt_nascimento'] = $this->input->post("dt_nascimento");
+			$tb_funcionario['cargo_id'] = $this->input->post("cargo");
+			$tb_funcionario['usuario'] = lcfirst($this->input->post("nome")).'.'.lcfirst($this->input->post("sobrenome"));
+			$tb_funcionario['senha'] = md5($this->input->post("nome"));
+			$this->db->insert('tb_funcionario', $tb_funcionario);
+		//echo $this->db->last_query(); //Use para verificar a última consulta executada
+        //exit();				
+		}		
 		if($this->db->update('tb_candidato', $tb_candidato)){
 			$this->session->set_flashdata('msg-sucesso', "Dados atualizados com sucesso.");
 		}else{
@@ -154,7 +167,7 @@ class Auxiliar extends CI_Controller {
 	public function extrairAgendados(){
 			$productResult = $this->auxiliar_model->listarAgendados()->result_array();
 			if (isset($_POST["export"])) {
-				$filename = "Processos_realizados.xls";
+				$filename = "Processos_agendados.xls";
 				header("Content-Type: application/vnd.ms-excel");
 				header("Content-Disposition: attachment; filename=\"$filename\"");
 				$isPrintHeader = false;

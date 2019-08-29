@@ -20,7 +20,7 @@
           <tr>
             <td><?=$funcionario->nome;?></td>
             <td><?=$funcionario->email;?></td>
-			      <td><?=$funcionario->usuario;?></td>
+			<td><?=$funcionario->usuario;?></td>
             <td><?=$funcionario->cargo;?></td>
             <td align="center">
               <button type=" button" class="btn btn-success btn-sm" onclick="buscarFuncionario('<?=$funcionario->id;?>')" data-toggle="modal"
@@ -37,7 +37,10 @@
 </div>
 </div>
 <?php
- require 'modal_cadastra_candidato.php';
- require 'modal_funcionarios.php';
- require 'modal_adiciona_usuario.php';
+	require 'modal_finalizar_processos.php';
+	require 'modal_cadastra_candidato.php';
+	require 'modal_visualizar_processos.php';
+	require 'modal_adiciona_usuario.php';
+	require 'modal_funcionarios.php';
+	require 'modal_informacoes_candidato.php';
 ?>	  

@@ -36,12 +36,12 @@
   									<?php }; ?>
   								</select>
   							</div>
-  							<div class="form-group col-md-6">
+  							<div class="form-group col-md-4">
   								<label for="inputNumero">Telefone</label>
   								<input type="text" class="form-control" value="" id="inputNum" name="telefone"
   									data-mask="(00) 00000-0000">
   							</div>
-  							<div class="form-group col-md-6">
+  							<div class="form-group col-md-4">
   								<label for="inputName">Cargo</label>
   								<select class="form-control" id="inputCargo" name="cargo">
   									<?php foreach($cargos as $cg){; ?>
@@ -49,6 +49,11 @@
   									<?php }; ?>
   								</select>
   							</div>
+  							<div class="form-group col-md-4">
+  								<label for="inputName">Nascimento</label>
+  								<input type="text" class="form-control" value="" id="inputNascimento" name="dt_nascimento"
+  									data-mask="00/00/0000" placeholder="DD/MM/AAAA">
+  							</div>	
 							  
   							<div class="form-group col-md-2">
   								<?php foreach($status as $st){; ?>
