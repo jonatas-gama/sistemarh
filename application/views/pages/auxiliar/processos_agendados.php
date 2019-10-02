@@ -1,4 +1,25 @@
 <div class="container mt-2 border-2">
+
+<?php
+	if($this->session->flashdata('msg-erro')){ ?>
+		<div class="mt-2 alert alert-danger alert-dismissible fade show text-center">
+			<?=$this->session->flashdata('msg-erro');?>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>			
+		</div>
+<?php } ;?>
+
+<?php
+	if($this->session->flashdata('msg-sucesso')){ ?>
+		<div class="mt-2 alert alert-success alert-dismissible fade show text-center">
+			<?=$this->session->flashdata('msg-sucesso');?>
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>			
+		</div>
+<?php } ; ?>
+
 <div class="card">
 	<h3 class="card-header text-white bg-info">
 	Processos Agendados
@@ -36,14 +57,14 @@
         </tbody>
 		<?php }; ?>
       </table>
-	<form method="post">
-	<button type="submit" class="btn btn-success" name="export" formaction="<?=base_url('auxiliar/extrairAgendados');?>">Download</button>	
-	</form>	  
 	  <!--tabela-->
 	</div>	
 </div>
 </div>
 <?php
-	require 'modal_cadastra_candidato.php';
 	require 'modal_finalizar_processos.php';
+	require 'modal_cadastra_candidato.php';
+	require 'modal_visualizar_processos.php';
+	require 'modal_funcionarios.php';
+	require 'modal_informacoes_candidato.php';
 ?>

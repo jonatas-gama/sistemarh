@@ -16,29 +16,27 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" name="nome" disabled/>
+                        <input type="text" class="form-control" id="funcionario_nome" name="nome" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="sobrenome">Sobrenome</label>
-                        <input type="text" class="form-control" id="sobrenome" name="sobrenome" disabled/>
+                        <input type="text" class="form-control" id="funcionario_sobrenome" name="sobrenome" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email" disabled/>
+                        <input type="email" class="form-control" id="funcionario_email" name="email" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="dt_nascimento">Nascimento</label>
-                        <input type="email" class="form-control" id="dt_nascimento" name="dt_nascimento" disabled/>
+                        <input type="email" class="form-control" id="funcionario_nascimento" name="dt_nascimento" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="usuario">Usu&aacute;rio</label>
-                        <input type="email" class="form-control" id="usuario" name="usuario" disabled/>
+                        <input type="email" class="form-control" id="funcionario_usuario" name="usuario" disabled/>
                       </div>					  
                       <div class="form-group col-md-6">
                         <label for="inputName">Cargo</label>
-                <select class="form-control" id="inputCargo" name="cargo" disabled/>
-                    <option value="1">consultor</option>
-                </select>
+                       <input type="texte" id="funcionario_cargo" class="form-control" disabled/>
                       </div>
                     </div>
                   </form>

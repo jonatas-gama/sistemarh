@@ -1,15 +1,16 @@
-<?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Funcionarios extends CI_Controller {
 	
     public function __construct(){
         parent::__construct();
 		$this->load->model('funcionario_model');
+		verificaSessao($this->session->userdata('nome'));
     }	
 	
 	public function index() 
 	{
+        //$dados['funcionario'] = $this->funcionario_model->buscarFuncionario($id)->result();
 		$this->load->view('template/funcionarios/header');
 		$this->load->view('pages/funcionarios/index');
 		$this->load->view('template/funcionarios/footer');
@@ -52,16 +53,9 @@ class Funcionarios extends CI_Controller {
         $this->load->view('pages/funcionarios/andamento');
         $this->load->view('template/funcionarios/footer');
     }
-    public function logout()
-    {
-        $dadosSessao['cliente'] = NULL;
-        $dadosSessao['logado'] = FALSE;
-        $this->session->set_userdata($dadosSessao);
-        redirect(base_url("login/logout"));
-    }
 	
 	public function buscarFuncionario($id){
-		$funcionario = $this->funcionario_model->buscarFuncionario($id)->result();
+        $funcionario = $this->funcionario_model->buscarFuncionario($id)->result();
 		echo json_encode($funcionario);
 	}
 }

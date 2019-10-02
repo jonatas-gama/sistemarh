@@ -5,7 +5,7 @@
 	</h3>
 	<div class="card-body">
 	 <!--tabela-->
-      <table class="table table-bordered table-hover">
+      <table class="table table-bordered table-hover" id='postsList'>
         <thead>
           <tr>
             <th scope="col">Nome</th>
@@ -17,24 +17,12 @@
 			<th scope="col">Opção</th>
           </tr>
         </thead>
-		<?php foreach($realizados as $realizado){?>
-        <tbody>
-          <tr>
-            <td><?=$realizado->nome;?></td>
-            <td><?=$realizado->telefone;?></td>
-			<td><?=$realizado->cargo;?></td>
-			<td><?=$realizado->data;?></td>
-			<td><?=$realizado->status;?></td>
-			<td><?=$realizado->observacao;?></td>
-            <td align="center">
-              <button type=" button" class="btn btn-success btn-sm" onclick="buscaRealizado('<?=$realizado->id;?>')" data-toggle="modal"
-                data-target="#visualizarProcessos">Visualizar</button>
-            </td>
-          </tr>
-        </tbody>
-		<?php }; ?>
+        <tbody></tbody>
+
       </table>
 	  <!--tabela-->
+	   <!-- Paginate -->
+	   <div id='pagination'></div>		  
 	</div>	
 </div>
 </div>

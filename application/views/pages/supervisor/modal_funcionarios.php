@@ -16,27 +16,27 @@
                     <div class="form-row">
                       <div class="form-group col-md-6">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="inputNome" name="nome" disabled/>
+                        <input type="text" class="form-control" id="funcionario_nome" name="nome" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="sobrenome">Sobrenome</label>
-                        <input type="text" class="form-control" id="inputSobre" name="sobrenome" disabled/>
+                        <input type="text" class="form-control" id="funcionario_sobrenome" name="sobrenome" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="inputEmail1" name="email" disabled/>
+                        <input type="email" class="form-control" id="funcionario_email" name="email" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="dt_nascimento">Nascimento</label>
-                        <input type="email" class="form-control" id="dt_nascimento" name="dt_nascimento" disabled/>
+                        <input type="email" class="form-control" id="funcionario_nascimento" name="dt_nascimento" disabled/>
                       </div>
                       <div class="form-group col-md-6">
                         <label for="usuario">Usu&aacute;rio</label>
-                        <input type="email" class="form-control" id="usuario" name="usuario" disabled/>
+                        <input type="email" class="form-control" id="funcionario_usuario" name="usuario" disabled/>
                       </div>					  
                       <div class="form-group col-md-6">
                         <label for="inputName">Cargo</label>
-                       <input type="texte" id="cargo" class="form-control" disabled/>
+                       <input type="texte" id="funcionario_cargo" class="form-control" disabled/>
                       </div>
                     </div>
                   </form>

@@ -1,3 +1,7 @@
+<?php
+ini_set("display_errors",1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -30,12 +34,12 @@
       <div class="list-group list-group-flush">
         <a href="<?=base_url('auxiliar');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line"></i> Relatórios</a>
         <a href="<?=base_url('auxiliar/processosagendados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt"></i>Processos Agendados</a>
-        <a href="<?=base_url('auxiliar/processosrealizados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check"></i> Processos Realizados</a>
+        <a href="<?=base_url('auxiliar/processosreprovados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: red;" class="fas fa-clipboard-check"></i> Reprovados</a>
+        <a href="<?=base_url('auxiliar/processosaprovados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-clipboard-check"></i> Aprovados</a>		
         <a href="<?=base_url('auxiliar/visualizafuncionarios');?>" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users"></i> Funcionários</a>
         <a href="#" data-toggle="modal" data-target="#largeShoes1"
           class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus"></i>Cadastrar Candidato</a>
-        <!--<a href="#" data-toggle="modal" data-target="#largeShoes3"
-          class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>-->
+        <!--<a href="#" data-toggle="modal" data-target="#adcionaUsuario" class="list-group-item list-group-item-action bg-light"><i style="color: DarkOrchid;" class="fas fa-id-card fa-lg"></i> Adicionar Usuário</a>-->
       </div>
     </div>
 
@@ -45,8 +49,8 @@
         <button class="btn btn-light" id="menu-toggle"><img
             src="https://img.icons8.com/metro/26/000000/menu.png"></button>
         <nav class="navbar navbar-light bg-light col-9">
-          <form class="form-inline col-12">
-            <input class="form-control col-10 mr-sm-2 border-top-0 border-right-0 border-left-0" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+          <form class="form-inline col-12" method="post" action="<?=base_url('auxiliar/buscarcandidato');?>">
+            <input class="form-control col-10 mr-sm-2 border-top-0 border-right-0 border-left-0" name="pessoa" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
           </form>
         </nav>
@@ -62,9 +66,7 @@
           </ul>
         </div>
       </nav>
-
     <!-- Bootstrap e JavaScript -->
   
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-
     </body>

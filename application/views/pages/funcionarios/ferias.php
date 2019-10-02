@@ -25,7 +25,7 @@
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th scope="col">Nome do Funcionario:</th>
+						<th scope="col">Nome:</th>
 						<th scope="col">Data de Início:</th>
 						<th scope="col">Data do término:</th>
 						<th scope="col">Status:</th>

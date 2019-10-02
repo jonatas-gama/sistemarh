@@ -23,7 +23,7 @@
 			<td><?=$funcionario->usuario;?></td>
             <td><?=$funcionario->cargo;?></td>
             <td align="center">
-              <button type="button" class="btn btn-success btn-sm" onclick="buscarFuncionario('<?=$funcionario->id;?>')" data-toggle="modal"
+              <button type=" button" class="btn btn-success btn-sm" onclick="buscarFuncionario('<?=$funcionario->id;?>')" data-toggle="modal"
                 data-target="#visualizaFunc">Visualizar</button>
               <!--<button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                 data-target="#largeShoes1">Editar</button>-->
@@ -31,12 +31,15 @@
           </tr>
         </tbody>
 		<?php }; ?>
-      </table>  
+      </table>
 	  <!--tabela-->
 	</div>	
 </div>
 </div>
 <?php
- require 'modal_cadastra_candidato.php';
- require 'modal_funcionarios.php';
+	require 'modal_finalizar_processos.php';
+	require 'modal_cadastra_candidato.php';
+	require 'modal_visualizar_processos.php';
+	require 'modal_funcionarios.php';
+	require 'modal_informacoes_candidato.php';
 ?>	  

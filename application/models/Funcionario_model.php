@@ -7,9 +7,9 @@ class Funcionario_model extends CI_Model{
     }
     
 	public function buscarFuncionario($id){
-		$sql = "SELECT fc.cargo_id, fc.dt_nascimento, fc.email, fc.id, fc.nome, fc.sobrenome, fc.senha, fc.usuario, cg.cargo from tb_funcionario fc INNER JOIN tb_cargo cg ON fc.cargo_id = cg.id_cargo WHERE id = ?";
-		$result = $this->db->query($sql, $id);
-		return $result;		
+        $sql= "SELECT fc.nome, fc.sobrenome, fc.id, fc.email, fc.dt_nascimento, fc.senha, fc.usuario, cg.cargo FROM tb_funcionario fc JOIN tb_cargo cg ON fc.cargo_id = cg.id_cargo WHERE fc.id = ?";
+        $result = $this->db->query($sql, $id);
+		return $result;
 	}
 	
 }

@@ -6,6 +6,7 @@ class Login extends CI_Controller{
         $this->load->model('padrao_model');
 		$this->load->model('gerente_model');
 		$this->load->model('supervisor_model');
+		$this->load->model('funcionario_model');
     }
 	
 	public function login(){
@@ -59,11 +60,15 @@ class Login extends CI_Controller{
 			$this->load->view('template/auxiliar/footer');
 			
 		}elseif($funcionario){
+			foreach($funcionario as $f)
+			$this->session->set_userdata('nome',$f->nome);
+			$this->session->set_userdata('id',$f->id);
+			$this->session->set_userdata('usuario', $f->usuario);
+			//$data['funcionario'] = $this->funcionario_model->buscarFuncionario()->result();	
 			$dadosSessao['funcionario'] = $funcionario;
 			$dadosSessao['logado'] = TRUE;
-			$dadosSessao['msg'] = "";
-			$this->session->set_userdata($dadosSessao);
-			$data['title'] = "&Aacute;rea do Colaborador";
+			$dadosSessao['msg'] = "";			
+			$data['title'] = "Funcionário";
 			$this->load->view('template/funcionarios/header', $data);
 			$this->load->view('pages/funcionarios/index');
 			$this->load->view('template/funcionarios/footer');			
@@ -71,7 +76,7 @@ class Login extends CI_Controller{
 		}else{
 			$dadosSessao['funcionario'] = NULL;
 			$dadosSessao['logado'] = FALSE;
-			$dadosSessao['msg'] = "Usu�?rio ou senha incorreta";
+			$dadosSessao['msg'] = "Usuário ou senha incorreta";
 			$this->session->set_userdata($dadosSessao);                
 			redirect(base_url("/"));			
 		}	

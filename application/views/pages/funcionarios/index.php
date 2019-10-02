@@ -10,13 +10,13 @@
 						<label for="nome">
 							<h4>Nome:</h4>
 						</label>
-						<input type="text" class="form-control" id="nome" placeholder="Nome" disabled>
+						<input type="text" class="form-control" id="funcionario_nome" disabled>
 					</div>
 					<div class="form-group col-md-5 mt-3 ml-5">
 						<label for="sobrenome">
 							<h4>Sobrenome:</h4>
 						</label>
-						<input type="text" class="form-control" id="sobrenome" placeholder="Sobrenome" disabled>
+						<input type="text" class="form-control" id="funcionario_sobrenome" disabled>
 					</div>
 					<div class="form-group col-md-5 mt-3 ml-5">
 						<label for="cargo">
@@ -28,7 +28,7 @@
 						<label for="email">
 							<h4>E-mail:</h4>
 						</label>
-						<input type="text" class="form-control" id="email" disabled>
+						<input type="text" class="form-control" id="funcionario_email" disabled>
 					</div>
 					<div class="form-group col-md-5 mt-3 ml-5">
 						<label for="usuario">
@@ -40,7 +40,7 @@
 						<label for="senha">
 							<h4>Senha:</h4>
 						</label>
-						<input type="password" class="form-control" id="senha" disabled>
+						<input type="password" class="form-control" id="funcionario_senha" disabled>
 					</div>
 				</div>
 			</fieldset>

@@ -1,6 +1,9 @@
+<?php
+ini_set("display_errors",1);
+error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
 
   <meta charset="utf-8">
@@ -30,7 +33,8 @@
       <div class="list-group list-group-flush">
         <a href="<?=base_url('gerente');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Tomato;" class="fas fa-chart-line"></i>Relatórios</a>
         <a href="<?=base_url('gerente/processosagendados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-calendar-alt"></i>Processos Agendados</a>
-        <a href="<?=base_url('gerente/processosrealizados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Mediumslateblue;" class="fas fa-clipboard-check"></i>Processos Realizados</a>
+        <a href="<?=base_url('gerente/processosreprovados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: red;" class="fas fa-clipboard-check"></i> Reprovados</a>
+        <a href="<?=base_url('gerente/processosaprovados');?>" class="list-group-item list-group-item-action bg-light"><i style="color: Dodgerblue;" class="fas fa-clipboard-check"></i> Aprovados</a>    
         <a href="<?=base_url('gerente/visualizafuncionarios');?>" class="list-group-item list-group-item-action bg-light"><i style="color: chocolate;" class="fas fa-users"></i>Funcionários</a>
         <a href="#" data-toggle="modal" data-target="#largeShoes1"
           class="list-group-item list-group-item-action bg-light"><i style="color: #ffa500;" class="fas fa-user-plus"></i>Cadastrar Candidato</a>
@@ -42,27 +46,26 @@
 
     <!-- Menu Horizontal-->
     <div id="page-content-wrapper">
- 			<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom col-12">
- 				<button class="btn btn-light" id="menu-toggle"><img
- 						src="https://img.icons8.com/metro/26/000000/menu.png"></button>
- 				<nav class="navbar navbar-light bg-light col-9">
- 					<form class="form-inline col-12">
- 						<input class="form-control col-10 mr-sm-2 border-top-0 border-right-0 border-left-0" type="search"
- 							placeholder="Pesquisar" aria-label="Pesquisar">
- 						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
- 					</form>
- 				</nav>
- 				<div class="col-2 collapse navbar-collapse" id="navbarSupportedContent">
- 					<ul class="navbar-nav ml-auto mt-2 mt-lg-0">
- 						<li class="nav-item dropdown">
- 							<a href="#" class="nav-link dropdown-toggle text-success" id="navbarDropdown" role="button" data-toggle="dropdown"
- 								aria-haspopup="true" aria-expanded="false">Olá <?=$this->session->userdata('nome');?></a>
- 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
- 								<a class="dropdown-item" href="<?=base_url('login/logout');?>">Logout</a>
- 							</div>
- 						</li>
- 					</ul>
- 				</div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom col-12">
+        <button class="btn btn-light" id="menu-toggle"><img
+            src="https://img.icons8.com/metro/26/000000/menu.png"></button>
+        <nav class="navbar navbar-light bg-light col-9">
+          <form class="form-inline col-12" method="post" action="<?=base_url('gerente/buscarcandidato');?>">
+            <input class="form-control col-10 mr-sm-2 border-top-0 border-right-0 border-left-0" name="pessoa" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Pesquisar</button>
+          </form>
+        </nav>
+        <div class="col-2 collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Olá <?=$this->session->userdata('nome');?></a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="<?=base_url('login/logout');?>">Logout</a>
+              </div>
+            </li>
+          </ul>
+        </div>
        </nav>
        
        <!--Jquery-->

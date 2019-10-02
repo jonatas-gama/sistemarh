@@ -1,25 +1,28 @@
   <!-- Efeito do menu laretal -->
+  
   <script>
+	function buscarFuncionario(id){
+			$.getJSON("<?=base_url('funcionario/buscarFuncionario/');?>"+id, function(data){
+				document.getElementById('funcionario_nome').value = data[0].nome;
+				document.getElementById('funcionario_sobrenome').value = data[0].sobrenome;
+				document.getElementById('funcionario_email').value = data[0].email;
+				document.getElementById('funcionario_senha').value = data[0].dt_nascimento;
+				document.getElementById('funcionario_usuario').value = data[0].usuario;
+				document.getElementById('funcionario_cargo').value = data[0].cargo;
+				console.log(data);
+			});
+			
+			
+		}	
+
+		console.log(buscarFuncionario);
+  </script>
+
+	<script type="text/javascript">
     $("#menu-toggle").click(function (e) {
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });	
-  </script>
-  
-  <script>
-	function buscarFuncionario(id){
-		//let id = "<?=$this->session->userdata('funcionario')[0]->id;?>";
-		$.getJSON("<?=base_url('funcionarios/buscarFuncionario/');?>"+id, function(data){	
-			document.getElementById('saudacao').innerHTML = data[0].nome;
-			document.getElementById('nome').value = data[0].nome;
-			document.getElementById('sobrenome').value = data[0].sobrenome;
-			document.getElementById('email').value = data[0].email;
-			document.getElementById('usuario').value = data[0].usuario;
-			document.getElementById('senha').value = data[0].senha;
-			document.getElementById('cargo').value = data[0].cargo;
-			console.log(data);
-		});		
-	}
   </script>
 
 <!-- Bootstrap e JavaScript -->
